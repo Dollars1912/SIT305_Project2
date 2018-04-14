@@ -1,0 +1,3 @@
+sword: 
+attk,90
+range,100
