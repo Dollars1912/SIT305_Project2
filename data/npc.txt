@@ -1,0 +1,3 @@
+p_name£º
+dialog_one:
+dialog_two:
