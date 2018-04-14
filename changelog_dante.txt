@@ -1,0 +1,4 @@
+create project 
+
+
+Add changelog file , run the application on android devices , adjust the windows     7:41   2017/4/15
