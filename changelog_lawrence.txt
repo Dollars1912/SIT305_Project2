@@ -1,0 +1,2 @@
+8th April: create main scene(add move and jump function)/working on background and NPC design.
+13 April: variable changed and add license. 
