@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +7,8 @@ public class PlayerController : MonoBehaviour {
 	public GameObject Player;
     public CharacterController CharacterController;
 	public Camera Camera;
-
 	public float speed = 6.0F;
-	public float jumpSpeed = 8.0F;
+	public float jumpSpeed = 15.0F;
 	public float gravity = 20.0F;
 	private Vector3 moveDirection = Vector3.zero;
 
@@ -36,19 +35,19 @@ public class PlayerController : MonoBehaviour {
         Camera.transform.position = new Vector3(Player.transform.position.x, oldPos.y, oldPos.z);
 	}
 
-  //  private void UpdateHorizontal()
-  //  {
-		//var x = Input.GetAxis("Horizontal") * Time.deltaTime * 10.0f;
+    private void UpdateHorizontal()
+    {
+		var x = Input.GetAxis("Horizontal") * Time.deltaTime * 10.0f;
 
-		//Vector3 characterPos = Character.transform.position;
-		//Vector3 cameraPos = Camera.transform.position;
+        Vector3 characterPos = Player.transform.position;
+		Vector3 cameraPos = Camera.transform.position;
 
-		//Vector3 newCharacterPos = characterPos + new Vector3(x, 0, 0);
-		//Vector3 newCameraPos = cameraPos + new Vector3(x, 0, 0);
+		Vector3 newCharacterPos = characterPos + new Vector3(x, 0, 0);
+		Vector3 newCameraPos = cameraPos + new Vector3(x, 0, 0);
 
-		//Character.transform.position = newCharacterPos;
-		//Camera.transform.position = newCameraPos;
-    //}
+        Player.transform.position = newCharacterPos;
+		Camera.transform.position = newCameraPos;
+    }
 
 }
 
