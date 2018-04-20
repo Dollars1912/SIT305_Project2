@@ -7,3 +7,8 @@ Dante He (215330413)
 - Not enough commits + changelog items to pass at this frequency.
 - I couldn't find your text-based data. Create a root folder "data/" and put all your JSON files in there.
 - You're still missing a licenses.txt + changelog.md file.
+
+# Henry comments 17/April
+- Good update on data. But I recommend either you use an existing format (e.g. JSON), or if making your own, include some symbols that you can search for in Strings so that you know how to parse your data.
+- Changelog.txt should be a single file for both people. At the end of each task, put the author name in [square brackets]
+

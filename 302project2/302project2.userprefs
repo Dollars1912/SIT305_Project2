@@ -1,12 +1,5 @@
 ﻿<Properties StartupConfiguration="{77A74B78-B7E1-5F9C-886D-225614C3745D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainScene/Scripts/PlayerController.cs">
-    <Files>
-      <File FileName="Assets/MainScene/Scripts/PlayerController.cs" Line="11" Column="1" />
-      <File FileName="Assets/joybutton.cs" Line="1" Column="1" />
-      <File FileName="Assets/myScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/scroll.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
