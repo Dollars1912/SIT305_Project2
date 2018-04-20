@@ -263,6 +263,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="AGDLevelDesigner">
+      <HintPath>Assets/AbleGamesDev/LevelDesigner/AGDLevelDesigner.dll</HintPath>
+    </Reference>
     <Reference Include="Editor.ReorderableList">
       <HintPath>Assets/Fungus/Thirdparty/Reorderable List Field/Editor/Editor.ReorderableList.dll</HintPath>
     </Reference>
@@ -286,9 +289,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="AGDLevelDesigner">
-      <HintPath>Assets/AbleGamesDev/LevelDesigner/AGDLevelDesigner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
