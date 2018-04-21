@@ -784,6 +784,8 @@
     <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrCacheSurrogate.cs" />
     <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrParams.cs" />
     <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrSynth.cs" />
+    <Compile Include="Assets\game_resourse\character\scripts\DoorController.cs" />
+    <Compile Include="Assets\game_resourse\character\scripts\Knight.cs" />
     <Compile Include="Assets\joybutton.cs" />
     <Compile Include="Assets\MainScene\Scripts\PlayerController.cs" />
     <Compile Include="Assets\menucontrol.cs" />
