@@ -8,6 +8,7 @@ public class DoorController : MonoBehaviour {
     public GameObject Knight;
     public Animator animator;
     public string ScaleAnimationName = "Scale";
+    public string GoToLevel;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,7 +27,7 @@ public class DoorController : MonoBehaviour {
         while (!Input.GetButton("Jump"))
             yield return null;
 
-		SceneManager.LoadScene("level1");
+        SceneManager.LoadScene(GoToLevel);
 	}
 
     private void OnTriggerExit2D(Collider2D other)
