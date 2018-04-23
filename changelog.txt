@@ -1,4 +1,6 @@
 create project 
 
-
 Add changelog file , run the application on android devices , adjust the windows     7:41   2017/4/15
+
+8th April: create main scene(add move and jump function)/working on background and NPC design.
+13 April: variable changed and add license. 
