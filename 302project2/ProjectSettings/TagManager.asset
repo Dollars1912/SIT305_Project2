@@ -9,6 +9,7 @@ TagManager:
   - collector
   - Ground2
   - StartPointBrick
+  - aboveGround
   layers:
   - Default
   - TransparentFX
