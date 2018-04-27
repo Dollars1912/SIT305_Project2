@@ -8,10 +8,22 @@ public class Knight : MonoBehaviour {
     [Tooltip("this is a the grradient for horoizontal speed")]
     public float speedBoost = 5f;
     public float jumpspeed;
-    bool isjump;
+    public Transform feet;
+    public float feetradius;
+    public float boxwidth;
+    public float boxheight;
+    public float delayforDoublejump;
+    public LayerMask whatIsground;
+    public Transform swordattkleftPos, swordattkrightPos;
+    //rightbulletspawnsPos, leftbulletspownsPos;
+    public GameObject swordattkleft, swordattkright;
+    //leftattkbullet, rightbullet
+    bool isjump,canDoubleJump,isattack;
+    public bool isgrounded;
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
+    
     
     // Use this for initialization
     void Start () {
@@ -22,7 +34,7 @@ public class Knight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
+        isgrounded = Physics2D.OverlapBox(new Vector2(feet.position.x,feet.position.y),new Vector2(boxwidth,boxheight),360.0f,whatIsground);
         float playerSpeed = Input.GetAxisRaw("Horizontalmove");
        playerSpeed *= speedBoost;
         if (playerSpeed != 0)
@@ -32,6 +44,12 @@ public class Knight : MonoBehaviour {
         
         if (Input.GetButtonDown("Jump"))
             jump();
+        if (Input.GetButtonDown("Fire1"))
+        {
+            attck();
+            anim.SetInteger("state", 0);
+        }
+
    	}   
 
 
@@ -46,16 +64,53 @@ public class Knight : MonoBehaviour {
         if(!isjump)
             anim.SetInteger("state", 1);
     }
+    private void OnDrawGizmos()
+    {
+        
+        Gizmos.DrawWireCube(feet.position, new Vector3(boxwidth, boxheight, 0));
+    }
     void stopmoving()
     {
         rb.velocity = new Vector2(0, rb.velocity.y);
         if(!isjump)
             anim.SetInteger("state", 0);
     }
+    void attck()
+    {
+        //make the player attck in facing derection
+        if (sr.flipX)
+        {
+
+            anim.SetInteger("state", 3);
+            Instantiate(swordattkleft, swordattkleftPos.position, Quaternion.identity);
+        }
+        if (!sr.flipX)
+        {
+            
+            anim.SetInteger("state", 3);
+            Instantiate(swordattkright, swordattkrightPos.position, Quaternion.identity);
+        }
+    }
     void jump()
     {
-        rb.AddForce(new Vector2(0, jumpspeed));
-        anim.SetInteger("state", 2);
+        if (isgrounded) {
+            isjump = true;
+            rb.AddForce(new Vector2(0, jumpspeed));
+            anim.SetInteger("state", 2);
+            Invoke("EnableDoubleJump", delayforDoublejump);
+        }
+        if(canDoubleJump && !isgrounded)
+        {
+            rb.velocity = Vector2.zero;
+            rb.AddForce(new Vector2(0, jumpspeed));
+            anim.SetInteger("state", 2);
+            canDoubleJump = false;
+        }
+        
+    }
+    void EnableDoubleJump()
+    {
+        canDoubleJump = true;
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
