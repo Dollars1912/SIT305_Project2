@@ -1,6 +1,29 @@
-create project 
+Create project 
 
-Add changelog file , run the application on android devices , adjust the windows     7:41   2017/4/15
+8th April: create main scene(add move and jump function)/working on background and NPC design
 
-8th April: create main scene(add move and jump function)/working on background and NPC design.
-13 April: variable changed and add license. 
+13 April: variable changed and add license.
+
+15 April: add dialog and collision/ Add change log file , run the application on android devices , adjust the windows
+
+17 April: add more picture to assets (NOT DONE: add assets to prefab)
+
+18 April: create new branch; add material, resolve conflict
+
+19 April: layout change
+
+20 April: add menu page and main game level1 (NOT DONE: should be use level developer in UNITY)
+
+21 April: Create character/ create transform door “GoToScene”(DONE: character model. NOT DONE: character animation, some problem with door animation)
+
+22 April: level2 version1/ add assets and edit license
+
+23 April: recreate level1 (level developer)/ change character variable(gravity, jumpSpeed. NOT DONE: jump time limit)
+
+24 April: level1 version1.2/ fix change log
+
+25 April: add rebirthPointScene/ edit level2/ add level3 scene(DONE: level map design. NOT DONE: background and background sets)
+
+26 April: add animation(DONE: face different position, animation while walking. NOT DONE: Jump animation)
+
+27 April: finish rebirthPointScene/ finish level1 and 2/ create level3/ add new prefabs
