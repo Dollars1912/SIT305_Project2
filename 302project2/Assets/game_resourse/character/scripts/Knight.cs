@@ -20,6 +20,7 @@ public class Knight : MonoBehaviour {
     //leftattkbullet, rightbullet
     bool isjump,canDoubleJump,isattack;
     public bool isgrounded;
+    bool leftpressed, rightprressed;
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
@@ -49,8 +50,17 @@ public class Knight : MonoBehaviour {
             attck();
             anim.SetInteger("state", 0);
         }
+        if (leftpressed)
+        {
+            Horizontalmoves(-speedBoost);
 
-   	}   
+        }
+        if (rightprressed)
+        {
+            Horizontalmoves(speedBoost);
+
+        }
+    }   
 
 
     void Horizontalmoves(float playerSpeed)
@@ -117,6 +127,40 @@ public class Knight : MonoBehaviour {
         if (other.gameObject.CompareTag("ground"))
         {
             isjump = false;
+        }
+    }
+    public void mobileleft()
+    {
+        leftpressed = true;
+
+    }
+    public void mobileattck()
+    {
+        attck();
+    }
+    public void mobilejump()
+    {
+        jump();
+    }
+    public void mobileright()
+    {
+        rightprressed = true;  
+    }
+    public void mobilestop()
+    {
+        leftpressed = false;
+        rightprressed = false;
+        stopmoving();
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "Coin":
+                SFXctrl.sfxcontrol.ShowSparkle(other.gameObject.transform.position);
+                break;
+            default:
+                break;
         }
     }
 }

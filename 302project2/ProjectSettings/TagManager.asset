@@ -10,6 +10,7 @@ TagManager:
   - Ground2
   - StartPointBrick
   - aboveGround
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -55,4 +56,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3102175453
+    locked: 0
+  - name: ui
+    uniqueID: 2224193487
     locked: 0
