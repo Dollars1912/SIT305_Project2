@@ -5,7 +5,7 @@ using UnityEngine;
 public class SFXctrl : MonoBehaviour {
 
     public static SFXctrl sfxcontrol;
-    public GameObject sfx_item_pickup;
+    public SFXgroup sfx; 
     private void Awake()
     {
         if (sfxcontrol == null)
@@ -17,6 +17,19 @@ public class SFXctrl : MonoBehaviour {
     /// <param name="pos"></param>
     public void ShowSparkle(Vector3 pos)
     {
-        Instantiate(sfx_item_pickup, pos, Quaternion.identity);
+        Instantiate(sfx.sfx_item_pickup, pos, Quaternion.identity);
+    }
+    public void ShowPowerupSparkle(Vector3 pos)
+    {
+        Instantiate(sfx.sfx_powerup, pos, Quaternion.identity);
+    }
+    public void ShowlandedSparkle(Vector3 pos)
+    {
+        Instantiate(sfx.sfx_player_landed, pos, Quaternion.identity);
+    }
+    public void Showopenbox(Vector3 pos)
+    {
+        Instantiate(sfx.openbox, pos, Quaternion.identity);
     }
 }
+ 

@@ -11,6 +11,7 @@ TagManager:
   - StartPointBrick
   - aboveGround
   - Coin
+  - powerup
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - collector
   - Enemy
   - player
-  - 
+  - openbox
   - 
   - 
   - 

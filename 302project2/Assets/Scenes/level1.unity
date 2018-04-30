@@ -7229,7 +7229,8 @@ Prefab:
       propertyPath: m_TagString
       value: Coin
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114005166975518442, guid: 445c476c78072994496f1b74904dfbce, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 445c476c78072994496f1b74904dfbce, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &189580424 stripped
@@ -7237,18 +7238,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1097765234253104, guid: 445c476c78072994496f1b74904dfbce,
     type: 2}
   m_PrefabInternal: {fileID: 189580423}
---- !u!114 &189580425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 189580424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7576b31f01de8bc438a6165c80c8945b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx_item_pickup: {fileID: 116108, guid: 520a250d5ad784c9daafddc2a8d8db7b, type: 2}
 --- !u!114 &189580426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30290,6 +30279,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4349173662788992, guid: 8cd626c745d5f46d595b5d3553a60560,
     type: 2}
   m_PrefabInternal: {fileID: 731342346}
+--- !u!1 &731774510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 731774511}
+  - component: {fileID: 731774512}
+  m_Layer: 0
+  m_Name: SFXctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &731774511
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 731774510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1764772315}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &731774512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 731774510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7576b31f01de8bc438a6165c80c8945b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx:
+    sfx_item_pickup: {fileID: 116108, guid: 520a250d5ad784c9daafddc2a8d8db7b, type: 2}
 --- !u!1001 &733412473
 Prefab:
   m_ObjectHideFlags: 0
@@ -33522,42 +33553,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1097765234253104, guid: 445c476c78072994496f1b74904dfbce, type: 2}
-      propertyPath: m_Name
-      value: hud_coins
+    - target: {fileID: 114005166975518442, guid: 445c476c78072994496f1b74904dfbce,
+        type: 2}
+      propertyPath: itemfx
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 445c476c78072994496f1b74904dfbce, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &803857366 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1097765234253104, guid: 445c476c78072994496f1b74904dfbce,
-    type: 2}
-  m_PrefabInternal: {fileID: 803857365}
---- !u!114 &803857367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 803857366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7576b31f01de8bc438a6165c80c8945b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx_item_pickup: {fileID: 116108, guid: 520a250d5ad784c9daafddc2a8d8db7b, type: 2}
---- !u!114 &803857368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 803857366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26eb09f03410e844c83060a75133f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemfx: 0
 --- !u!1001 &805641206
 Prefab:
   m_ObjectHideFlags: 0
@@ -78286,6 +78289,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 895916029}
+  - {fileID: 731774511}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -92602,6 +92606,7 @@ MonoBehaviour:
     m_Bits: 768
   swordattkleftPos: {fileID: 1838643245}
   swordattkrightPos: {fileID: 1376806722}
+  SFXison: 0
   swordattkleft: {fileID: 1193559084521546, guid: c4aca0f91af19664d88bbc82153ee4d4,
     type: 2}
   swordattkright: {fileID: 1432780384012056, guid: 0f919e439e1cda643974f79116b68f9e,

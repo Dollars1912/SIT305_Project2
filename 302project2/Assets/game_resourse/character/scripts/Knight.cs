@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Knight : MonoBehaviour {
 
-    
-    [Tooltip("this is a the grradient for horoizontal speed")]
+
+    [Tooltip("this is a the gradient for horoizontal speed")]
+
     public float speedBoost = 5f;
+    public bool Ispowerpup =false;
     public float jumpspeed;
     public Transform feet;
     public float feetradius;
@@ -15,6 +17,7 @@ public class Knight : MonoBehaviour {
     public float delayforDoublejump;
     public LayerMask whatIsground;
     public Transform swordattkleftPos, swordattkrightPos;
+    public bool SFXison;
     //rightbulletspawnsPos, leftbulletspownsPos;
     public GameObject swordattkleft, swordattkright;
     //leftattkbullet, rightbullet
@@ -24,20 +27,21 @@ public class Knight : MonoBehaviour {
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
-    
+    public 
     
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+       
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
         isgrounded = Physics2D.OverlapBox(new Vector2(feet.position.x,feet.position.y),new Vector2(boxwidth,boxheight),360.0f,whatIsground);
         float playerSpeed = Input.GetAxisRaw("Horizontalmove");
-       playerSpeed *= speedBoost;
+        playerSpeed *= speedBoost;
         if (playerSpeed != 0)
             Horizontalmoves(playerSpeed);
         else
@@ -88,18 +92,23 @@ public class Knight : MonoBehaviour {
     void attck()
     {
         //make the player attck in facing derection
-        if (sr.flipX)
+        if (Ispowerpup == true)
         {
-
-            anim.SetInteger("state", 3);
-            Instantiate(swordattkleft, swordattkleftPos.position, Quaternion.identity);
+          
+            if (sr.flipX)
+            {
+                
+                anim.SetInteger("state", 3);
+                Instantiate(swordattkleft, swordattkleftPos.position, Quaternion.identity);
+            }
+            if (!sr.flipX)
+            {
+                
+                anim.SetInteger("state", 3);
+                Instantiate(swordattkright, swordattkrightPos.position, Quaternion.identity);
+            }
         }
-        if (!sr.flipX)
-        {
-            
-            anim.SetInteger("state", 3);
-            Instantiate(swordattkright, swordattkrightPos.position, Quaternion.identity);
-        }
+          
     }
     void jump()
     {
@@ -157,7 +166,15 @@ public class Knight : MonoBehaviour {
         switch (other.gameObject.tag)
         {
             case "Coin":
-                SFXctrl.sfxcontrol.ShowSparkle(other.gameObject.transform.position);
+                if(SFXison)
+                    SFXctrl.sfxcontrol.ShowSparkle(other.gameObject.transform.position);
+                break;
+            case "powerup":
+                Ispowerpup = true;
+                Vector3 powerupPos = other.gameObject.transform.position;
+                Destroy(other.gameObject);
+                if (SFXison)
+                    SFXctrl.sfxcontrol.ShowSparkle(powerupPos);
                 break;
             default:
                 break;
