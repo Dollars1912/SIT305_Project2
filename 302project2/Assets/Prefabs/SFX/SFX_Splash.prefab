@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 19804712}
   - component: {fileID: 19951784}
   - component: {fileID: 11499786}
+  - component: {fileID: 114607837609143286}
   m_Layer: 0
   m_Name: SFX_Splash
   m_TagString: Untagged
@@ -3482,8 +3483,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -91904615
-  m_SortingLayer: 0
+  m_SortingLayerID: -1305310265
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -3514,3 +3515,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 177332}
   m_IsPrefabParent: 1
+--- !u!114 &114607837609143286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b67298d37e9d14ab18bfa29beb4b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3

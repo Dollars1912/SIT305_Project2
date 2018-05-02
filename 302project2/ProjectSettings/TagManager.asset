@@ -12,6 +12,7 @@ TagManager:
   - aboveGround
   - Coin
   - powerup
+  - water
   layers:
   - Default
   - TransparentFX

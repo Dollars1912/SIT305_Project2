@@ -27,7 +27,7 @@ public class Knight : MonoBehaviour {
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
-    public 
+  
     
     // Use this for initialization
     void Start () {
@@ -168,6 +168,10 @@ public class Knight : MonoBehaviour {
             case "Coin":
                 if(SFXison)
                     SFXctrl.sfxcontrol.ShowSparkle(other.gameObject.transform.position);
+                break;
+            case "water":
+              
+                    SFXctrl.sfxcontrol.Showsplash(other.gameObject.transform.position);
                 break;
             case "powerup":
                 Ispowerpup = true;

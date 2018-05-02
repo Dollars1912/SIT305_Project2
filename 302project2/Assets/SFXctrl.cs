@@ -31,5 +31,9 @@ public class SFXctrl : MonoBehaviour {
     {
         Instantiate(sfx.openbox, pos, Quaternion.identity);
     }
+    public void Showsplash(Vector3 pos)
+    {
+        Instantiate(sfx.sfx_splash, pos, Quaternion.identity);
+    }
 }
  
