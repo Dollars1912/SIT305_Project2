@@ -13,6 +13,7 @@ TagManager:
   - Coin
   - powerup
   - water
+  - enemy
   layers:
   - Default
   - TransparentFX
