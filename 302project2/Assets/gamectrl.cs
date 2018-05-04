@@ -33,7 +33,7 @@ public class gamectrl : MonoBehaviour {
     {
         timeleft = Maxtime;
         HandleFirstBoot();
-       // updatehealth();
+        updatehealth();
         updateexp();
 	}
 	
@@ -86,7 +86,7 @@ public class gamectrl : MonoBehaviour {
         data.exp_total = 100;
         data.exp_percentage = 0;
         data.level = 1;
-        //updatehealth();
+        updatehealth();
         updateexp();
         bf.Serialize(fs, data);
         fs.Close();

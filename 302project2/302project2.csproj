@@ -773,7 +773,6 @@
     <Compile Include="Assets\itemctrl.cs" />
     <Compile Include="Assets\menucontrol.cs" />
     <Compile Include="Assets\mobileUIctrl.cs" />
-    <Compile Include="Assets\myScript.cs" />
     <Compile Include="Assets\openboxctrl.cs" />
     <Compile Include="Assets\scroll.cs" />
     <Compile Include="Assets\SFXctrl.cs" />
