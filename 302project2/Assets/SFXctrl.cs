@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SFXctrl : MonoBehaviour {
-
+    /// <summary>
+    /// contain the method that show the SFX
+    /// </summary>
     public static SFXctrl sfxcontrol;
     public SFXgroup sfx; 
     private void Awake()

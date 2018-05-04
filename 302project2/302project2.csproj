@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -243,6 +245,7 @@
     <Compile Include="Assets\cameractrl.cs" />
     <Compile Include="Assets\coincellecterr.cs" />
     <Compile Include="Assets\DestroywithDelay.cs" />
+    <Compile Include="Assets\DoorController.cs" />
     <Compile Include="Assets\feetctrl.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Break.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Call.cs" />
@@ -771,6 +774,7 @@
     <Compile Include="Assets\gamedata.cs" />
     <Compile Include="Assets\garbagectrl.cs" />
     <Compile Include="Assets\itemctrl.cs" />
+    <Compile Include="Assets\Knight.cs" />
     <Compile Include="Assets\menucontrol.cs" />
     <Compile Include="Assets\mobileUIctrl.cs" />
     <Compile Include="Assets\openboxctrl.cs" />

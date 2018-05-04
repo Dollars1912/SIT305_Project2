@@ -6,6 +6,9 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.UI;
 
+/// <summary>
+/// store and load the data from binary file and update the character HUD(上面的所有属性) 
+/// </summary>
 public class gamectrl : MonoBehaviour {
     public static gamectrl gamecontrl;
     public float restrtdelay;
@@ -73,6 +76,7 @@ public class gamectrl : MonoBehaviour {
         Debug.Log("data saved");
         Savedata();
     }
+    //tap esc to restore the database 
     void ResetData()
     {
         FileStream fs = new FileStream(datafilepath, FileMode.Create);
@@ -92,7 +96,7 @@ public class gamectrl : MonoBehaviour {
         fs.Close();
         Debug.Log("has been reset");
     }
-
+    //reload scene2 when player dieed
     public void playerdied(GameObject player)
     {
         player.SetActive(false);
@@ -116,6 +120,7 @@ public class gamectrl : MonoBehaviour {
     {
         SceneManager.LoadScene("level2");
     }
+    //method for timer
     void UpdateTimer()
     {
         timeleft -= Time.deltaTime;
@@ -149,6 +154,7 @@ public class gamectrl : MonoBehaviour {
             data.isFirstBoot = false;
         }
     }
+    //control the health bar
    void updatehealth()
     {
         data.health_percentage = (data.health_now / data.health_total );
@@ -164,6 +170,7 @@ public class gamectrl : MonoBehaviour {
             Debug.Log(ui.img_health.rectTransform.sizeDelta);
         }
     }
+    //control the exp bar 
     void updateexp()
     {
         data.exp_percentage = (data.exp_now / data.exp_total);
@@ -186,6 +193,7 @@ public class gamectrl : MonoBehaviour {
            
         }
     }
+    //control the log for health and exp
     void checkhealth()
     {
         Debug.Log("diaoyongle");

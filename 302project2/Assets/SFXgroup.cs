@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// list object for sfx effect
+/// </summary>
 [Serializable]
 public class SFXgroup {
 
