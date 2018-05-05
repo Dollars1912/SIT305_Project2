@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class mobileUIctrl : MonoBehaviour {
-    /// <summary>
-    /// script for mobilebutton
-    /// </summary>
+
     public GameObject knight;
     Knight player;
 	// Use this for initialization

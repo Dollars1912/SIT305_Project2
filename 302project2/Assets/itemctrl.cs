@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class itemctrl : MonoBehaviour {
-    /// <summary>
-    /// control the collecting item
-    /// </summary>
+
     public enum ItemFX
     {
         Vanish,Fly
@@ -30,7 +28,7 @@ public class itemctrl : MonoBehaviour {
             transform.position = Vector3.Lerp(transform.position, coinMeter.transform.position, speed);
         }
     }
-    //logic when user selct different method when collide with coin
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -40,7 +38,6 @@ public class itemctrl : MonoBehaviour {
             else if(itemfx == ItemFX.Fly)
             {
                 startflying = true;
-                Destroy(gameObject);
             }
         }
     }

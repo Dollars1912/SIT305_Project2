@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-/// <summary>
-/// list object for the item written in the binarry file
-/// </summary>
 [Serializable]
-
 public class gamedata{
 
     public int coinCount;

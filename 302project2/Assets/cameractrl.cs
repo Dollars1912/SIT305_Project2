@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/// <summary>
-/// make the camera follow the player
-/// </summary>
+
 public class cameractrl : MonoBehaviour {
     public Transform player;
     public float yoffset;

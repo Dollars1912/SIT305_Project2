@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 [Serializable]
 public class UIctrl {
-    /// <summary>
-    /// the list for the ui menu object
-    /// </summary>
+
 
     [Header("Text")]
     public Text txtCoinCount;

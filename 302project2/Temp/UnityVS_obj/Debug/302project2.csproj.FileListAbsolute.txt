@@ -1,2 +1,0 @@
-C:\Users\97290\Desktop\新建文件夹\SIT305_Project2\302project2\Temp\UnityVS_obj\Debug\302project2.csprojResolveAssemblyReference.cache
-C:\Users\97290\Desktop\新建文件夹\SIT305_Project2\302project2\Temp\UnityVS_obj\Debug\302project2.csproj.CoreCompileInputs.cache
