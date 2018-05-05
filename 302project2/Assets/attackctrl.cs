@@ -18,14 +18,16 @@ public class attackctrl : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("box"))
         {
-            Destroy(collision.gameObject.transform.gameObject);
-            SFXctrl.sfxcontrol.Showopenbox(collision.gameObject.transform.position);
+            var boxController = collision.gameObject.GetComponent<BoxContoller>();
+            if (!boxController)
+                return;
             
+            boxController.OnTriggered();
         }
     }
     public void changespeed()
     {
-        velocity = new Vector2(10, 0);
+        velocity = new Vector2(10, 0);  
         rib.velocity = velocity;
     }
 }

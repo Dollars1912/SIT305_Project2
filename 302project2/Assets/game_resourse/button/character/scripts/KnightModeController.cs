@@ -20,6 +20,7 @@ public class KnightModeController : MonoBehaviour
 	#endregion
 
     #region Private Fields
+
     // TODO hook this currentMode field with the game controller.
     // TODO change it back to private
     public KnightMode currentMode;
@@ -27,6 +28,7 @@ public class KnightModeController : MonoBehaviour
     #endregion
 
     #region Unity Hook
+
     void FixedUpdate()
     {
         switch (currentMode)
@@ -42,5 +44,6 @@ public class KnightModeController : MonoBehaviour
 				break;
         }
     }
+
     #endregion
 }
