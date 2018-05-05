@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{77A74B78-B7E1-5F9C-886D-225614C3745D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/feetctrl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/mobileUIctrl.cs">
     <Files>
-      <File FileName="Assets/garbagectrl.cs" Line="16" Column="10" />
-      <File FileName="Assets/game_resourse/button/character/scripts/KnightModeController.cs" Line="32" Column="1" />
-      <File FileName="Assets/feetctrl.cs" Line="14" Column="10" />
+      <File FileName="Assets/game_resourse/button/character/scripts/Knight.cs" Line="147" Column="26" />
+      <File FileName="Assets/mobileUIctrl.cs" Line="27" Column="20" />
       <File FileName="Assets/SFXctrl.cs" Line="28" Column="35" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/DOLLARS1912/Projects/SIT305_Project2/302project2/Assets/feetctrl.cs" relfile="Assets/feetctrl.cs" line="11" column="35" />
+      <Breakpoint file="/Users/DOLLARS1912/Projects/SIT305_Project2/302project2/Assets/game_resourse/button/character/scripts/Knight.cs" relfile="Assets/game_resourse/button/character/scripts/Knight.cs" line="96" column="1" />
+      <Breakpoint file="/Users/DOLLARS1912/Projects/SIT305_Project2/302project2/Assets/game_resourse/button/character/scripts/Knight.cs" relfile="Assets/game_resourse/button/character/scripts/Knight.cs" line="55" column="13" />
+      <Breakpoint file="/Users/DOLLARS1912/Projects/SIT305_Project2/302project2/Assets/game_resourse/button/character/scripts/Knight.cs" relfile="Assets/game_resourse/button/character/scripts/Knight.cs" line="149" column="9" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

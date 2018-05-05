@@ -53,7 +53,6 @@ public class Knight : MonoBehaviour {
         if (Input.GetButtonDown("Fire1"))
         {
             attck();
-            anim.SetInteger("state", 0);
         }
         if (leftpressed)
         {
@@ -83,12 +82,14 @@ public class Knight : MonoBehaviour {
         
         Gizmos.DrawWireCube(feet.position, new Vector3(boxwidth, boxheight, 0));
     }
+
     void stopmoving()
     {
         rb.velocity = new Vector2(0, rb.velocity.y);
         if(!isjump)
             anim.SetInteger("state", 0);
     }
+
     void attck()
     {
         //make the player attck in facing derection

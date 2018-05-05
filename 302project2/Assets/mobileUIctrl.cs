@@ -14,7 +14,6 @@ public class mobileUIctrl : MonoBehaviour {
 	public void mobileMoveleft()
     {
         player.mobileleft();
-
     }
     public void mobileMoverright()
     {
@@ -31,6 +30,10 @@ public class mobileUIctrl : MonoBehaviour {
     public void mobileMovejump()
     {
         player.mobilejump();
+    }
+    public void mobildeHeal()
+    {
+        //TODO
     }
     // Update is called once per frame
     void Update () {
