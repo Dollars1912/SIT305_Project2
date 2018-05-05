@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class attackctrl : MonoBehaviour {
    
-    Rigidbody2D rib;
-   
-   
+    Rigidbody2D rib; 
     public Vector2 velocity;
     public static attackctrl attackcontrl;
     void Start () {
@@ -24,6 +22,12 @@ public class attackctrl : MonoBehaviour {
             
             boxController.OnTriggered();
         }
+        else if (collision.gameObject.CompareTag("enemy"))
+        {
+            gamectrl.gamecontrl.hitenemy(collision.gameObject.transform);
+            Destroy(gameObject);
+        }
+      
     }
     public void changespeed()
     {

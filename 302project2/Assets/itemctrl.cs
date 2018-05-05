@@ -38,6 +38,7 @@ public class itemctrl : MonoBehaviour {
             else if(itemfx == ItemFX.Fly)
             {
                 startflying = true;
+                
             }
         }
     }

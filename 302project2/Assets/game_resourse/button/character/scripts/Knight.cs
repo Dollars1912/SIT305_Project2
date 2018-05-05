@@ -93,7 +93,7 @@ public class Knight : MonoBehaviour {
     void attck()
     {
         //make the player attck in facing derection
-        if (Ispowerpup == true)
+        if (Ispowerpup == false)
         {
           
             if (sr.flipX)
@@ -111,6 +111,7 @@ public class Knight : MonoBehaviour {
         }
           
     }
+
     void jump()
     {
         if (isgrounded) {
@@ -132,11 +133,26 @@ public class Knight : MonoBehaviour {
     {
         canDoubleJump = true;
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("ground"))
         {
             isjump = false;
+        }
+        if (other.gameObject.CompareTag("enemy"))
+        {
+            anim.SetInteger("state",-1);
+            gamectrl.gamecontrl.playerdiedanimation(gameObject);
+            anim.SetInteger("state", 0);
+
+        }
+        if (other.gameObject.CompareTag("coin_level2"))
+        {
+            gamectrl.gamecontrl.UpdateCoinCount();
+            SFXctrl.sfxcontrol.ShowSparkle(other.gameObject.transform.position);
+            Destroy(other.gameObject);
+            gamectrl.gamecontrl.gainexp(gamectrl.value_Item.bigcoin);
+          
         }
     }
     public void mobileleft()
@@ -167,11 +183,11 @@ public class Knight : MonoBehaviour {
         switch (other.gameObject.tag)
         {
             case "Coin":
-                if (SFXison)
-                {
+  
                     SFXctrl.sfxcontrol.ShowSparkle(other.gameObject.transform.position);
                     gamectrl.gamecontrl.UpdateCoinCount();
-                }
+                    gamectrl.gamecontrl.gainexp(gamectrl.value_Item.coin);
+                
                 break;
             case "water":
                // garabagectrl.SetActive(false);

@@ -14,6 +14,8 @@ TagManager:
   - powerup
   - water
   - enemy
+  - airwall
+  - coin_level2
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - Enemy
   - player
   - openbox
-  - 
+  - airwall
   - 
   - 
   - 

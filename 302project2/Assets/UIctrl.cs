@@ -13,6 +13,8 @@ public class UIctrl {
     public Text exp;
     public Text txtTimer;
     public Text level;
+    public Text health_total;
+    public Text health_now;
     [Header("Images/Sprites")]
     public Image img_health;
     public Image img_exp;

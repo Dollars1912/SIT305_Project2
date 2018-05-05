@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SFXctrl : MonoBehaviour {
+public class SFXctrl : MonoBehaviour
+{
 
     public static SFXctrl sfxcontrol;
-    public SFXgroup sfx; 
+    public SFXgroup sfx;
     private void Awake()
     {
         if (sfxcontrol == null)
@@ -30,6 +31,10 @@ public class SFXctrl : MonoBehaviour {
     public void Showsplash(Vector3 pos)
     {
         Instantiate(sfx.sfx_splash, pos, Quaternion.identity);
+    }
+    public void enemyexplode(Vector3 pos)
+    {
+        Instantiate(sfx.sfx_enemy_died, pos, Quaternion.identity);
     }
 }
  

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.UI;
 
@@ -11,13 +12,20 @@ public class gamectrl : MonoBehaviour {
     public float restrtdelay;
     public gamedata data;
     public UIctrl ui;
+    public GameObject bigcoin;
+    public int coinvalue;
     public float Maxtime;
     public int maxhealth;
+    public int bigcoinvalue;
+    public int enemyvalue;
     string datafilepath;
-    
+
     BinaryFormatter bf;
     float timeleft;
-
+    public enum value_Item
+    {
+        coin,bigcoin,enemy1,enemy2,enemy3,dead
+    }
 
     private void Awake()
     {
@@ -96,23 +104,50 @@ public class gamectrl : MonoBehaviour {
     public void playerdied(GameObject player)
     {
         player.SetActive(false);
+        loselife();
+        gainexp(value_Item.dead);
         checkhealth();
         // Invoke("restartlevel", restrtdelay);
     }
-    public void playerdied_water(GameObject player)
+    public void playerdiedanimation(GameObject player)
     {
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        rb.AddForce(new Vector2(-300f, 400f));
+        player.GetComponent<Knight>().enabled = false;
+        rb.velocity = Vector2.zero;
+        foreach(Transform child in player.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        Camera.main.GetComponent<cameractrl>().enabled = false;
+        StartCoroutine("pausebeforeload",player);
+      
+    }
+    IEnumerator pausebeforeload(GameObject player)
+    {
+        yield return new WaitForSeconds(1.4f);
+        playerhurt(player);
+    }
+    public void playerhurt(GameObject player)
+    {
+        gethurt();
         checkhealth();
         //Invoke("restartlevel", restrtdelay);
     }
     public void UpdateCoinCount()
     {
-        data.coinCount += 1;
+        Savedata();
+        data.coinCount += 10;
         ui.txtCoinCount.text = "x" + data.coinCount;
     }
     /// <summary>
     /// restart level when player dies
     /// </summary>
     void restartlevel()
+    {
+        SceneManager.LoadScene("level2");
+    }
+    void Gameover()
     {
         SceneManager.LoadScene("level2");
     }
@@ -126,6 +161,17 @@ public class gamectrl : MonoBehaviour {
             GameObject player = GameObject.FindGameObjectWithTag("Player") as GameObject;
             playerdied(player);
         }
+    }
+    public void hitenemy(Transform enemy)
+    {
+        //show the explosion
+        Vector3 pos = enemy.position;
+        pos.z = 20f;
+        SFXctrl.sfxcontrol.enemyexplode(pos);
+        //Destrroy enemy
+        Destroy(enemy.gameObject);
+        //show the item
+        Instantiate(bigcoin,pos,Quaternion.identity);
     }
     void HandleFirstBoot()
     {
@@ -156,65 +202,101 @@ public class gamectrl : MonoBehaviour {
         if (data.health_percentage==1)
         {
             ui.img_health.rectTransform.sizeDelta = new Vector2(380, ui.img_health.rectTransform.sizeDelta.y);
+            ui.health_total.text = data.health_total.ToString();
+            ui.health_now.text = data.health_now.ToString();
             Debug.Log(ui.img_health.rectTransform.sizeDelta+"111111");
         }
         if (data.health_percentage < 1)
         {
             ui.img_health.rectTransform.sizeDelta = new Vector2(380 * (data.health_now / data.health_total), ui.img_health.rectTransform.sizeDelta.y);
+            ui.health_total.text = data.health_total.ToString();
+            ui.health_now.text = data.health_now.ToString();
             Debug.Log(ui.img_health.rectTransform.sizeDelta);
         }
     }
     void updateexp()
     {
         data.exp_percentage = (data.exp_now / data.exp_total);
+        int percentage_show =Convert.ToUInt16(data.exp_percentage * 100);
 
         if (data.exp_percentage == 1)
         {
             ui.img_exp.rectTransform.sizeDelta = new Vector2(0, ui.img_exp.rectTransform.sizeDelta.y);
+            ui.exp.text = percentage_show.ToString()+ "%";
 
             Debug.Log(ui.img_exp.rectTransform.sizeDelta + "111111");
         }
         if (data.exp_percentage < 1)
         {
             ui.img_exp.rectTransform.sizeDelta = new Vector2(370 * (data.exp_now / data.exp_total), ui.img_exp.rectTransform.sizeDelta.y);
+            ui.exp.text = percentage_show.ToString() + "%";
             Debug.Log(ui.img_exp.rectTransform.sizeDelta);
         }
         if(data.exp_percentage > 1)
         {
             ui.img_exp.rectTransform.sizeDelta = new Vector2(370 * (data.exp_now / data.exp_total-1), ui.img_exp.rectTransform.sizeDelta.y);
+            ui.exp.text = percentage_show.ToString() + "%";
             Debug.Log(ui.img_exp.rectTransform.sizeDelta);
            
         }
     }
+    void loselife()
+    {
+        data.health_now = 0;
+        Savedata();
+        
+    }
+    void gethurt()
+    {
+        data.health_now -= 20;
+        Savedata();
+        updatehealth();
+    }
+    public void gainexp(value_Item item)
+    {
+        int itmvalue = 0;
+        switch (item)
+        {
+            case value_Item.bigcoin:
+                itmvalue = bigcoinvalue;
+                break;
+            case value_Item.enemy1:
+                itmvalue = enemyvalue;
+                break;
+            case value_Item.dead:
+                itmvalue = 50;
+                break;
+            default:
+                break;
+        }
+        data.exp_now += itmvalue;
+        Savedata();
+        updateexp();
+    }
+
     void checkhealth()
     {
-        Debug.Log("diaoyongle");
-        //health update
 
-        data.health_now -= 20;
-        //experience update
-
-        data.exp_now +=30;
-        Debug.Log(data.exp_now);
-        if (data.exp_total <= data.exp_now)
+        if(data.health_now <= 0)
         {
-            data.level++;
-            data.health_total = data.health_total + 20 * data.level;
-             data.exp_now = data.exp_now - data.exp_total;
-            data.exp_total = data.exp_total + 20 * (data.level-1);
-           
-            Debug.Log("kanguole");
-            Debug.Log(data.level);
-        }
+            
+           // Debug.Log(data.exp_now);
+            if (data.exp_total <= data.exp_now)
+            {
+                data.level++;
+                ui.level.text = data.level.ToString();
+                data.health_total = data.health_total + 20 * data.level;
+                data.exp_now = data.exp_now - data.exp_total;
+                data.exp_total = data.exp_total + 20 * (data.level - 1);
 
-        if(data.health_now == 0)
-        {
+                Debug.Log("kanguole");
+                Debug.Log(data.level);
+            }
             data.health_now = data.health_total;
             Savedata();
-           Invoke("GameOver", restrtdelay);
-
+            Invoke("Gameover", restrtdelay);
         }
-        else
+        else if(data.health_now > 0)
         {
           //data.health_total = 100 + 20 * data.level;
 

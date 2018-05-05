@@ -10,5 +10,6 @@ public class SFXgroup {
     public GameObject sfx_player_landed;        //landed effect
     public GameObject openbox;       //bos open effect
     public GameObject sfx_splash;    //splash effect
+    public GameObject sfx_enemy_died;  //exploded effect
 	
 }
