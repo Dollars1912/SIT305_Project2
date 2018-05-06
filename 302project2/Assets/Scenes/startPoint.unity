@@ -54578,7 +54578,6 @@ GameObject:
   - component: {fileID: 1864506601}
   - component: {fileID: 1864506603}
   - component: {fileID: 1864506605}
-  - component: {fileID: 1864506606}
   - component: {fileID: 1864506602}
   - component: {fileID: 1864506607}
   - component: {fileID: 1864506608}
@@ -54628,6 +54627,7 @@ GameObject:
   - component: {fileID: 1864506652}
   - component: {fileID: 1864506653}
   - component: {fileID: 1864506654}
+  - component: {fileID: 1864506606}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -54660,7 +54660,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1864506608}
+  - {fileID: 1864506603}
   selectedCommands: []
   variables: []
   description: 
@@ -54769,18 +54769,18 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1864506606
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864506600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a49012bdc794e429686c1eff7d9ced90, type: 3}
+  m_Script: {fileID: 11500000, guid: 000864f8e9e1748a39807861d0e60e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 1864506603}
-  clickableObject: {fileID: 1236427624}
-  waitFrames: 1
+  keyPressType: 0
+  keyCode: 113
 --- !u!114 &1864506607
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -55263,7 +55263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 75.6376
+    x: 77
     y: 237
     width: 120
     height: 40

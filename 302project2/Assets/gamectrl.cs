@@ -19,7 +19,7 @@ public class gamectrl : MonoBehaviour {
     public int bigcoinvalue;
     public int enemyvalue;
     string datafilepath;
-
+    
     BinaryFormatter bf;
     float timeleft;
     public enum value_Item
@@ -68,6 +68,8 @@ public class gamectrl : MonoBehaviour {
             FileStream fs = new FileStream(datafilepath, FileMode.Open);
             data = (gamedata)bf.Deserialize(fs);
             ui.txtCoinCount.text = "x" + data.coinCount;
+            ui.level.text = "Level: " + data.level.ToString();
+            data.health_now = data.health_total;
             fs.Close();
         }
     }
@@ -112,25 +114,29 @@ public class gamectrl : MonoBehaviour {
     public void playerdiedanimation(GameObject player)
     {
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(-300f, 400f));
+        rb.AddForce(new Vector2(-3000f, 400f));
         player.GetComponent<Knight>().enabled = false;
-        rb.velocity = Vector2.zero;
-        foreach(Transform child in player.transform)
+        ///player.GetComponent<Collider2D>().enabled = false;
+   
+       // rb.velocity = Vector2.zero;
+        /*foreach(Transform child in player.transform)
         {
             child.gameObject.SetActive(false);
         }
-        Camera.main.GetComponent<cameractrl>().enabled = false;
+        Camera.main.GetComponent<cameractrl>().enabled = false;*/
         StartCoroutine("pausebeforeload",player);
       
     }
     IEnumerator pausebeforeload(GameObject player)
     {
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(0.5f);
+        player.GetComponent<Knight>().enabled = true;
         playerhurt(player);
     }
     public void playerhurt(GameObject player)
     {
         gethurt();
+        
         checkhealth();
         //Invoke("restartlevel", restrtdelay);
     }
@@ -276,24 +282,26 @@ public class gamectrl : MonoBehaviour {
 
     void checkhealth()
     {
-
         if(data.health_now <= 0)
         {
             
            // Debug.Log(data.exp_now);
             if (data.exp_total <= data.exp_now)
             {
+
                 data.level++;
-                ui.level.text = data.level.ToString();
-                data.health_total = data.health_total + 20 * data.level;
+               
+                ui.level.text ="Level: "+ data.level.ToString();
+                data.health_total = 100 + 20 * (data.level-1);
                 data.exp_now = data.exp_now - data.exp_total;
                 data.exp_total = data.exp_total + 20 * (data.level - 1);
-
+                Savedata();
                 Debug.Log("kanguole");
                 Debug.Log(data.level);
+                Savedata();
             }
-            data.health_now = data.health_total;
-            Savedata();
+           
+            
             Invoke("Gameover", restrtdelay);
         }
         else if(data.health_now > 0)
@@ -301,7 +309,7 @@ public class gamectrl : MonoBehaviour {
           //data.health_total = 100 + 20 * data.level;
 
             Savedata();
-            Invoke("restartlevel", restrtdelay);
+            //Invoke("restartlevel", restrtdelay);
         }
     }
 }

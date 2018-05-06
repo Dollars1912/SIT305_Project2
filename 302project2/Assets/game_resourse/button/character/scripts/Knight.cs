@@ -142,9 +142,15 @@ public class Knight : MonoBehaviour {
         if (other.gameObject.CompareTag("enemy"))
         {
             anim.SetInteger("state",-1);
-            gamectrl.gamecontrl.playerdiedanimation(gameObject);
-            anim.SetInteger("state", 0);
 
+            Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+           
+            gamectrl.gamecontrl.playerdiedanimation(gameObject);
+          //  yield return new WaitForSeconds(1.4f);
+            anim.SetInteger("state", 1);
+            Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>(),false);
+            
+             
         }
         if (other.gameObject.CompareTag("coin_level2"))
         {

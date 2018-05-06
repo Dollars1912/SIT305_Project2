@@ -7,13 +7,15 @@ public class Talkable : MonoBehaviour {
     public Flowchart talkFlowchart;
     public string onCollosionEnter;
 
-    private void OnCollisionEnter(UnityEngine.Collider2D other)
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (other.gameObject.CompareTag("player")){
+        if (collision.gameObject.CompareTag("player"))
+        {
             Block targetBlock = talkFlowchart.FindBlock(onCollosionEnter);
             talkFlowchart.ExecuteBlock(targetBlock);
         }
     }
+   
 
 	// Use this for initialization
 	void Start () {
