@@ -805,6 +805,7 @@
     <Compile Include="Assets\SFXctrl.cs" />
     <Compile Include="Assets\SFXgroup.cs" />
     <Compile Include="Assets\simplemovement.cs" />
+    <Compile Include="Assets\Talkable.cs" />
     <Compile Include="Assets\UIctrl.cs" />
   </ItemGroup>
   <ItemGroup>
