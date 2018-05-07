@@ -111,7 +111,7 @@ public class gamectrl : MonoBehaviour {
         checkhealth();
         // Invoke("restartlevel", restrtdelay);
     }
-    public void playerdiedanimation(GameObject player)
+    public void playerhurtanimation(GameObject player)
     {
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2(-3000f, 400f));
@@ -126,6 +126,27 @@ public class gamectrl : MonoBehaviour {
         Camera.main.GetComponent<cameractrl>().enabled = false;*/
         StartCoroutine("pausebeforeload",player);
       
+    }
+    public void playerdiedanimation(GameObject player)
+    {
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        rb.AddForce(new Vector2(-3000f, 400f));
+        player.GetComponent<Knight>().enabled = false;
+        player.GetComponent<Collider2D>().enabled = false;
+
+        rb.velocity = Vector2.zero;
+        foreach(Transform child in player.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        Camera.main.GetComponent<cameractrl>().enabled = false;
+        StartCoroutine("pausebeforerestart", player);
+
+    }
+    IEnumerator pausebeforerestart(GameObject player)
+    {
+        yield return new WaitForSeconds(0.5f);
+        playerdied(player);
     }
     IEnumerator pausebeforeload(GameObject player)
     {

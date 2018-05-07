@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Knight : MonoBehaviour {
+    public static Knight knights;
+    private void Awake()
+    {
+        if ( knights== null)
+            knights = this;
 
+
+    }
 
     [Tooltip("this is a the gradient for horoizontal speed")]
 
     public float speedBoost = 5f;
-    public bool Ispowerpup =false;
+    public bool Ispowerpup ;
     public float jumpspeed;
     public Transform feet;
     public float feetradius;
@@ -92,6 +99,7 @@ public class Knight : MonoBehaviour {
 
     void attck()
     {
+        
         //make the player attck in facing derection
         if (Ispowerpup == false)
         {
@@ -102,14 +110,32 @@ public class Knight : MonoBehaviour {
                 anim.SetInteger("state", 3);
                 Instantiate(swordattkleft, swordattkleftPos.position, Quaternion.identity);
             }
-            if (!sr.flipX)
+            else if (!sr.flipX)
             {
                 
                 anim.SetInteger("state", 3);
                 Instantiate(swordattkright, swordattkrightPos.position, Quaternion.identity);
             }
         }
-          
+        else if (Ispowerpup == true)
+        {
+            
+            if (sr.flipX)
+            {
+
+                anim.SetInteger("state", 3);
+                
+                Instantiate(swordattkleft, swordattkleftPos.position, Quaternion.identity);
+            }
+            else if (!sr.flipX)
+            {
+
+                anim.SetInteger("state", 3);
+                
+                Instantiate(swordattkright, swordattkrightPos.position, Quaternion.identity);
+            }
+        }
+
     }
 
     void jump()
@@ -199,12 +225,15 @@ public class Knight : MonoBehaviour {
                // garabagectrl.SetActive(false);
                     SFXctrl.sfxcontrol.Showsplash(other.gameObject.transform.position);
                 break;
+            case "enemy":
+                // garabagectrl.SetActive(false);
+                gamectrl.gamecontrl.playerdiedanimation(gameObject);
+                break;
             case "powerup":
-                Ispowerpup = true;
                 Vector3 powerupPos = other.gameObject.transform.position;
                 Destroy(other.gameObject);
-                if (SFXison)
-                    SFXctrl.sfxcontrol.ShowSparkle(powerupPos);
+                Ispowerpup = true;
+                SFXctrl.sfxcontrol.ShowSparkle(powerupPos);
                 break;
             default:
                 break;

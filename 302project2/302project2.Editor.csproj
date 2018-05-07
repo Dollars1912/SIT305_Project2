@@ -290,6 +290,21 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="302project2.csproj">
@@ -357,6 +372,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Audio\Audio Credits.txt" />
+    <None Include="Assets\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
+    <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
+    <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
+    <None Include="Assets\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <None Include="Assets\Fonts\Apostrophic Labs License.txt" />
     <None Include="Assets\Fungus\Docs\CHANGELOG.txt" />
     <None Include="Assets\Fungus\Docs\LICENSE.txt" />
@@ -380,6 +401,7 @@
     <None Include="Assets\Sprites\Actors\Enemies\monster_round\get more at bevouliin_dot_com.txt" />
     <None Include="Assets\Sprites\Actors\Enemies\monster_sqaure\get more at bevouliin_dot_com.txt" />
     <None Include="Assets\Sprites\Actors\Enemies\monster_tiger\get more at bevouliin_dot_com.txt" />
+    <None Include="Assets\game_resourse\new assets\Knight-Characters-Free-Sprite\README.txt" />
     <None Include="Assets\game_resourse\new assets\last-guardian-sprites\readme.txt" />
     <None Include="Assets\game_resourse\new assets\living-tissue-platform-files\license.txt" />
   </ItemGroup>

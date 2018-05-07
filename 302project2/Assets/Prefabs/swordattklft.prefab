@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1193559084521546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.506573, y: -2.087954, z: 0}
-  m_LocalScale: {x: 0.7835952, y: 1.3761013, z: 1}
+  m_LocalPosition: {x: 14.3, y: 0.57, z: 0}
+  m_LocalScale: {x: 0.3363334, y: 0.36723766, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,18 +76,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12894547, y: 0}
+  m_Offset: {x: 0.7573999, y: 0.45098114}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.12, y: 5.66}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6332939, y: 1}
+  m_Size: {x: 5.587778, y: 4.7882233}
   m_EdgeRadius: 0
 --- !u!114 &114618962831623616
 MonoBehaviour:
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1193559084521546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41b67298d37e9d14ab18bfa29beb4b46, type: 3}
   m_Name: 
@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc3b42a438daf548b336b978f19fc77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
 --- !u!212 &212006640732073138
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -147,9 +146,9 @@ SpriteRenderer:
   m_SortingLayerID: -1305310265
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 187d55a30d417cc49abd2a00c1b179a8, type: 3}
-  m_Color: {r: 0.9852941, g: 0.07969292, b: 0.07969292, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 21300000, guid: aa932c3c5b1be9d40986ac622f02b9d0, type: 3}
+  m_Color: {r: 0.816, g: 0.103, b: 0.191, a: 0.759}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

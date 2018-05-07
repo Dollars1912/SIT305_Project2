@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoxContoller : MonoBehaviour
 {
-    #region states enum
+    //states enum
 
     public enum ChestState
     {
@@ -13,9 +13,7 @@ public class BoxContoller : MonoBehaviour
         Empty
     }
 
-    #endregion
-
-    #region Inspector Fields
+   // Inspector Fields
 
     public GameObject ClosedChest;
     public GameObject OpenChest;
@@ -23,9 +21,7 @@ public class BoxContoller : MonoBehaviour
 
     public ChestState CurrentMode = ChestState.Closed;
 
-    #endregion
-
-    #region Unity Hook
+ //Unity Hook
 
     void FixedUpdate()
     {
@@ -39,19 +35,19 @@ public class BoxContoller : MonoBehaviour
             case ChestState.Reward:
                 ClosedChest.SetActive(false);
                 OpenChest.SetActive(true);
+                Destroy(OpenChest, 1);
                 Reward.SetActive(true);
                 break;
             case ChestState.Empty:
                 ClosedChest.SetActive(false);
                 OpenChest.SetActive(true);
                 Reward.SetActive(false);
+                Destroy(OpenChest, 1);
                 break;
         }
     }
 
-    #endregion
 
-    #region Public methods
 
     public void OnTriggered()
     {
@@ -60,13 +56,11 @@ public class BoxContoller : MonoBehaviour
             case ChestState.Closed:
                 CurrentMode = ChestState.Reward;
                 break;
-            case ChestState.Reward:
-				CurrentMode = ChestState.Empty;
-				break;
+          
             case ChestState.Empty:
                 break;
         }
     }
 
-    #endregion
+ 
 }

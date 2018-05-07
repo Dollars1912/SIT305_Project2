@@ -3,15 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class attackctrl : MonoBehaviour {
-   
+ 
     Rigidbody2D rib; 
-    public Vector2 velocity;
+   Vector2 velocity;
     public static attackctrl attackcontrl;
+    private void Awake()
+    {
+        if (attackcontrl == null)
+            attackcontrl= this;
+
+       
+    }
     void Start () {
         rib= GetComponent<Rigidbody2D>();
-   
+        changespeed();
     }
+    private void Update()
+    {
+        rib.velocity = velocity;
 
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("box"))
@@ -29,9 +40,28 @@ public class attackctrl : MonoBehaviour {
         }
       
     }
+
     public void changespeed()
-    {
-        velocity = new Vector2(10, 0);  
-        rib.velocity = velocity;
+    { 
+        if(Knight.knights.Ispowerpup == true&&Knight.knights.GetComponent<SpriteRenderer>().flipX==true)
+        {
+            velocity = new Vector2(-10,0);
+            Destroy(this.gameObject, 1f);
+        }
+        else  if (Knight.knights.Ispowerpup == true && Knight.knights.GetComponent<SpriteRenderer>().flipX == false)
+        {
+                velocity = new Vector2(10, 0);
+            Destroy(this.gameObject, 1f);
+        }
+        else if (Knight.knights.Ispowerpup == false)
+        {
+            Destroy(this.gameObject, 0.5f);
+        }
+
+
+
+
+
+        Debug.Log("levelup");
     }
 }
