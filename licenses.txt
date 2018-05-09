@@ -1,40 +1,37 @@
-﻿305project2 -Mobile publishing software
+305project2 -Mobile publishing software -Copyright 2018 by the contributors
 
-Copyright 2018 by the contributors
+Audio file BGmusic: https://www.youtube.com/audiolibrary/music
+https://opengameart.org/content/living-tissue-platform-tileset
 
-
-
-https://opengameart.org/content/living-tissue-platform-tileset level 2 platfomer licence by https://creativecommons.org/licenses/by/3.0/
+level platfomer licence by https://creativecommons.org/licenses/by/3.0/
 
 enemy1(crockdale) https://opengameart.org/content/snappa-kappa  license by https://creativecommons.org/licenses/by/4.0/
 
-character（beifen） https://opengameart.org/content/700-sprites  license by  https://creativecommons.org/licenses/by/3.0/
+character(beifen) https://opengameart.org/content/700-sprites  license by  https://creativecommons.org/licenses/by/3.0/
+
 superman(character) https://opengameart.org/content/xeon-ultimate-smash-friends license by  https://creativecommons.org/licenses/by/3.0/
-Bat（enemey）https://opengameart.org/content/bat-32x32  license by https://opengameart.org/content/bat-32x32
+
+Bat(enemey)https://opengameart.org/content/bat-32x32  license by https://opengameart.org/content/bat-32x32
 
 Artwork created by Luis Zuno (@ansimuz)
-
 License (CC0) You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission: http://creativecommons.org/publicdomain/zero/1.0/
-
-Get more resources at ansimuz.com, Spread the word!
 
 Artwork created by Luis Zuno (@ansimuz)
-
 License (CC0) You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission: http://creativecommons.org/publicdomain/zero/1.0/
-
-Get more resources at ansimuz.com, Spread the word!
-
-
-
-
-
 
 shining coin from https://opengameart.org/content/shining-coin-shining-health-shining-power-up-sprite-sheets, licenced by https://creativecommons.org/publicdomain/zero/1.0/
 
 Bat enemy from  https://opengameart.org/content/bat-sprite,licened by http://opengameart.org/content/oga-by-30-faq
+
 medicine from https://opengameart.org/content/rpg-potions-16x16  licened by http://opengameart.org/content/oga-by-30-faq
+
 enemy green monster and magic monster frrom https://opengameart.org/content/animated-orcs licened by licened by http://opengameart.org/content/oga-by-30-faq
+
 knight powerup frrom https://opengameart.org/content/2d-game-knight-character-sprite licened by licened by http://opengameart.org/content/oga-by-30-faq 
+
 slash effect from https://opengameart.org/content/slash-effect-collection licend by creativecommons.org/publicdomain/zero/1.0/
+
 knight from https://opengameart.org/content/the-knight-free-sprite licenced by  creativecommons.org/publicdomain/zero/1.0/
-fireball from https://opengameart.org/content/spell-icon-collection-part-3 licened by licened by http://opengameart.org/content/oga-by-30-faq 
+
+fireball from https://opengameart.org/content/spell-icon-collection-part-3 licened by licened by http://opengameart.org/content/oga-by-30-faq
+

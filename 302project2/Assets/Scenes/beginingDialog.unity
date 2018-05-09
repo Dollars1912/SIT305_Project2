@@ -648,7 +648,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 1e1a4330e07c34ced93a8b0ae9a1db2d, type: 3}
+  - {fileID: 21300000, guid: 7da4481170a2a464db2c2f037f70d4a5, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -809,7 +809,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 818423401}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 1e1a4330e07c34ced93a8b0ae9a1db2d, type: 3}
+  portrait: {fileID: 21300000, guid: 7da4481170a2a464db2c2f037f70d4a5, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 65861147}
@@ -879,8 +879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 65
-    y: 105
+    x: 64
+    y: 103
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -930,7 +930,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 909573072}
   selectedCommands:
-  - {fileID: 909573075}
+  - {fileID: 909573080}
   variables: []
   description: 
   stepPause: 0
@@ -1240,7 +1240,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.03795415, g: 0.07466479, b: 0.13235295, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

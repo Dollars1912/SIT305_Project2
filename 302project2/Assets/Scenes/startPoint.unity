@@ -1535,7 +1535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -185.99998}
+  m_AnchoredPosition: {x: 0, y: -186.00002}
   m_SizeDelta: {x: 0, y: -400.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49820844
@@ -19141,7 +19141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -155.19995, y: 141.39998}
+  m_AnchoredPosition: {x: -155.19995, y: 141.4}
   m_SizeDelta: {x: 150.8, y: 117}
   m_Pivot: {x: 0.5000001, y: 0.49999988}
 --- !u!114 &634372158
@@ -40169,7 +40169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -41.30005, y: -121.70001}
+  m_AnchoredPosition: {x: -41.30005, y: -121.7}
   m_SizeDelta: {x: 82.5, y: 72.7}
   m_Pivot: {x: 0.49999812, y: 0.49999994}
 --- !u!114 &1367567700
@@ -54769,7 +54769,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1864506606
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864506600}
@@ -55144,7 +55144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 94
+    x: 92.6376
     y: 160
     width: 120
     height: 40

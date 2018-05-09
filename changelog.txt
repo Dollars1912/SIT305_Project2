@@ -26,4 +26,28 @@ Create project
 
 26 April: add animation(DONE: face different position, animation while walking. NOT DONE: Jump animation)
 
-27 April: finish rebirthPointScene/ finish level1 and 2/ create level3/ add new prefabs
+27 April: finish rebirthPointScene/ finish level1 and 2/ create level3/ add new prefabs.
+
+28 April: add attack and character action/animation:
+
+29 April: finish update StartPoint, player move, buttons and collect items:
+
+30 April: change character value to fit in each level/ add level3 enemy:
+
+1 May: interactive with box, add SFX
+
+2 May: add NPC character/ Design level3 Map/ Add Grade Criteria/ Add readme
+
+3 May: add HUD and store data in binary file
+
+4 May: finish database in one scene(save load health and exp.), enemy created
+
+5 May: changed Knight in all scenes to use one prefab. Add KnightModeController to change the knight mode(attack mode)
+
+5 May: fixed knight attack animation by setting exit time/ Added controller for box to let player pick item in box
+
+6 May: add beginning dialog and sound effect/ fix bug, fully function enemy, fully function database
+
+7 May: fix bugs and add more enemies/ add store dialog and NPC dialog
+
+8 May: more enemy added, power up(attack mode switch)update
