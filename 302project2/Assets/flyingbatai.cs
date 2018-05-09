@@ -15,7 +15,7 @@ public class flyingbatai : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player")|| collision.gameObject.CompareTag("grounds"))
+        if(collision.gameObject.CompareTag("Player")|| collision.gameObject.CompareTag("ground"))
         {
             SFXctrl.sfxcontrol.enemyexplode(collision.gameObject.transform.position);
             Destroy(gameObject, destroybeedelay);

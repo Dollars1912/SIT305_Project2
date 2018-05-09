@@ -13,11 +13,13 @@ public class Enemypatrol : MonoBehaviour {
     bool canturn;
     float origanalspeed;
     SpriteRenderer sr;
+    Animator anim;
     Rigidbody2D rb;
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         SetStarrtingdirection();
         canturn = true;
 	}
@@ -37,10 +39,17 @@ public class Enemypatrol : MonoBehaviour {
         Vector2 temp = rb.velocity;
         temp.x = speed;
         rb.velocity = temp;
+        anim.SetInteger("state",2);
+    }
+    void stopmoving()
+    {
+        
+        anim.SetInteger("state", 0);
     }
     void SetStarrtingdirection()
     {
         if (speed > 0)
+            
             sr.flipX = true;
         else if (speed < 0)
             sr.flipX = false;
@@ -67,7 +76,7 @@ public class Enemypatrol : MonoBehaviour {
            
             if (canturn)
             {
-                
+                stopmoving();
                 canturn = false;
                 origanalspeed = speed;
                 speed = 0;
@@ -79,7 +88,7 @@ public class Enemypatrol : MonoBehaviour {
         {
             if (canturn)
             {
-               
+                 stopmoving();
                  canturn = false;
                  origanalspeed = speed;
                  speed = 0;
