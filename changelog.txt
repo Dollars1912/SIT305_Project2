@@ -6,48 +6,48 @@ Create project
 
 15 April: add dialog and collision/ Add change log file , run the application on android devices , adjust the windows
 
-17 April: add more picture to assets (NOT DONE: add assets to prefab)
+17 April: add more picture to assets (Still working on: add assets to prefab)
 
 18 April: create new branch; add material, resolve conflict
 
 19 April: layout change
 
-20 April: add menu page and main game level1 (NOT DONE: should be use level developer in UNITY)
+20 April: add menu page and main game level1 (Still working on: should be use level developer in UNITY)
 
-21 April: Create character/ create transform door “GoToScene”(DONE: character model. NOT DONE: character animation, some problem with door animation)
+21 April: Create character/ create transform door “GoToScene”(DONE: character model. Still working on: character animation, some problem with door animation)
 
 22 April: level2 version1/ add assets and edit license
 
-23 April: recreate level1 (level developer)/ change character variable(gravity, jumpSpeed. NOT DONE: jump time limit)
+23 April: recreate level1 (level developer)/ change character variable(gravity, jumpSpeed. Still working on: jump time limit)
 
 24 April: level1 version1.2/ fix change log
 
-25 April: add rebirthPointScene/ edit level2/ add level3 scene(DONE: level map design. NOT DONE: background and background sets)
+25 April: add rebirthPointScene/ edit level2/ add level3 scene(DONE: level map design. Still working on: background and background sets)
 
-26 April: add animation(DONE: face different position, animation while walking. NOT DONE: Jump animation)
+26 April: add animation(DONE: face different position, animation while walking. Still working on: Jump animation)
 
-27 April: finish rebirthPointScene/ finish level1 and 2/ create level3/ add new prefabs.
+27 April: finish rebirthPointScene/ finish level1 and 2/ create level3/ add new prefabs(Still working on:The map is not fully completed. Still need to work on another level.)
 
-28 April: add attack and character action/animation:
+28 April: add attack and character action/animation. (Still working on: need to add SFX, attack effect is not complete.)
 
-29 April: finish update StartPoint, player move, buttons and collect items:
+29 April: finish update StartPoint, player move, buttons and collect items (Still working on: Only one scene is done, and need apply to other scene.)
 
-30 April: change character value to fit in each level/ add level3 enemy:
+30 April: change character value to fit in each level/ add level3 enemy. (Still working on:Only the enemy's image is added, need to complete the enemy's function.)
 
-1 May: interactive with box, add SFX
+1 May: interactive with box, add SFX. (Still working on: You need to complete the function of the drop rewards from the box.)
 
-2 May: add NPC character/ Design level3 Map/ Add Grade Criteria/ Add readme
+2 May: add NPC character/ Design level3 Map/ Add Grade Criteria/ Add readme. (Still working on: NPC and main character interaction, dialogue, and story.)
 
-3 May: add HUD and store data in binary file
+3 May: add HUD and store data in binary file. (Still working on:The blood value, experience, and equipment stored in the database.)
 
-4 May: finish database in one scene(save load health and exp.), enemy created
+4 May: finish database in one scene(save load health and exp.), enemy created. (Still working on: working on fully functional enemies.)
 
-5 May: changed Knight in all scenes to use one prefab. Add KnightModeController to change the knight mode(attack mode)
+5 May: changed Knight in all scenes to use one prefab. Add KnightModeController to change the knight mode(attack mode). (Still working on: Automatic switching attack mode when the player get equipment from the treasure chest or enemy.)
 
-5 May: fixed knight attack animation by setting exit time/ Added controller for box to let player pick item in box
+5 May: fixed knight attack animation by setting exit time/ Added controller for box to let player pick item in box. (Still working on: Drop items randomly and pick up items after an attack.)
 
-6 May: add beginning dialog and sound effect/ fix bug, fully function enemy, fully function database
+6 May: add beginning dialog and sound effect/ fix bug, fully function enemy, fully function database(Still working on: Complete the story and finish the story.)
 
-7 May: fix bugs and add more enemies/ add store dialog and NPC dialog
+7 May: fix bugs and add more enemies/ add store dialog and NPC dialog(Still working on: Let NPCS interact with players by attack button.)
 
-8 May: more enemy added, power up(attack mode switch)update
+8 May: more enemy added, power up(attack mode switch)update. (Still working on: More kinds of enemies, put the enemy in all the levels. Build final boss, final level design.)

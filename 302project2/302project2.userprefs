@@ -6,7 +6,7 @@
       <File FileName="Assets/attackctrl.cs" Line="25" Column="1" />
       <File FileName="Assets/Fungus/Scripts/Components/SpriteFader.cs" Line="16" Column="30" />
       <File FileName="Assets/Talkable.cs" Line="18" Column="4" />
-      <File FileName="Assets/feetctrl.cs" Line="13" Column="1" />
+      <File FileName="Assets/feetctrl.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
@@ -15,6 +15,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.302project2.Editor PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.ItemProperties.302project2 PreferredExecutionTarget="Unity.Editor" />
 </Properties>
