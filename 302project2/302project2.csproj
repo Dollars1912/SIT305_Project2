@@ -261,6 +261,8 @@
     <Compile Include="Assets\DestroywithDelay.cs" />
     <Compile Include="Assets\Enemypatrol.cs" />
     <Compile Include="Assets\feetctrl.cs" />
+    <Compile Include="Assets\fireballctrl.cs" />
+    <Compile Include="Assets\fireballsponcer.cs" />
     <Compile Include="Assets\flyingbatai.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Break.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Call.cs" />

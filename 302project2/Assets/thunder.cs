@@ -25,11 +25,11 @@ public class thunder : MonoBehaviour {
     {
         rb.AddForce(new Vector2(0,lightspeed));
     }
-    /*private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Player"))
+        if ( collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
         }
-    }*/
+    }
 }

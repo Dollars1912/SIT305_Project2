@@ -6,7 +6,7 @@ using UnityEngine;
 /// provides simpling patrolling behavior between 2 position
 /// </summary>
 public class Enemypatrol : MonoBehaviour {
-
+    public static Enemypatrol enmypatro;
     public Transform leftbound, rightbound;
     public float speed;
     public float maxdelay,mindelay;
@@ -23,9 +23,15 @@ public class Enemypatrol : MonoBehaviour {
         SetStarrtingdirection();
         canturn = true;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    private void Awake()
+    {
+        if (enmypatro == null)
+            enmypatro = this;
+     
+    }
+    
+    // Update is called once per frame
+    void Update () {
         move();
         FliponEdges();
 		
@@ -34,14 +40,14 @@ public class Enemypatrol : MonoBehaviour {
     {
         Gizmos.DrawLine(leftbound.position, rightbound.position);
     }
-    private void move()
+    public void move()
     {
         Vector2 temp = rb.velocity;
         temp.x = speed;
         rb.velocity = temp;
         anim.SetInteger("state",2);
     }
-    void stopmoving()
+   public  void stopmoving()
     {
         
         anim.SetInteger("state", 0);

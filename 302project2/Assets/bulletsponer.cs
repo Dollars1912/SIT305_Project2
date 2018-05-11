@@ -9,9 +9,9 @@ public class bulletsponer : MonoBehaviour {
     public GameObject thunder;
     public float spawnDelay;
     public bool canSpawn;
-         
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         canSpawn = true;
 	}
 	
