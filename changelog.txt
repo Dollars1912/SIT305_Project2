@@ -1,4 +1,4 @@
-Create project 
+Create Project 
 
 8th April: create main scene(add move and jump function)/working on background and NPC design
 
@@ -51,3 +51,11 @@ Create project
 7 May: fix bugs and add more enemies/ add store dialog and NPC dialog(Still working on: Let NPCS interact with players by attack button.)
 
 8 May: more enemy added, power up(attack mode switch)update. (Still working on: More kinds of enemies, put the enemy in all the levels. Build final boss, final level design.)
+
+9 May: add change log Readme/add game icon,Splash screen(Still working on: game icon for now is just for test, still working on the new game icon.)
+
+9 May: create finial level/finish beginning dialog/add change-log, readme/add more enemies(Still working on: load each scenes from level map.)
+
+10 May: create thunder, create fire magician(Still working on: change enemy valuable and put enemy into different level.)
+
+12 May: adapt all scene for scene load, fireball attack(Still working on: different dialog into levels)

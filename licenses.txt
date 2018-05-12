@@ -1,37 +1,86 @@
 305project2 -Mobile publishing software -Copyright 2018 by the contributors
 
-Audio file BGmusic: https://www.youtube.com/audiolibrary/music
-https://opengameart.org/content/living-tissue-platform-tileset
+Item name: Vespers(Audio file BG music SIT305_Project2/302project2/Assets/Audio)
+License type: PublicDomain
+Author/Attribution: youtubeAudioLibrary
+Source Website: https://www.youtube.com/audiolibrary/music
 
-level platfomer licence by https://creativecommons.org/licenses/by/3.0/
+Item name: Boss_Music_Video Dungeon Boss, BG_Music_Pixelland(Audio file BG music SIT305_Project2/302project2/Assets/Audio)
+License type: Attribution 3.0 License
+Author/Attribution: Kevin MacLeod
+Source Website: incompetech.com
 
-enemy1(crockdale) https://opengameart.org/content/snappa-kappa  license by https://creativecommons.org/licenses/by/4.0/
+Item name: level platformer (SIT305_Project2/302project2/Assets/AbleGamesDev/LevelDesigner)
+License type: Attribution 3.0 Unported
+Source Website: licensed by https://creativecommons.org/licenses/by/3.0/
 
-character(beifen) https://opengameart.org/content/700-sprites  license by  https://creativecommons.org/licenses/by/3.0/
+Item name: enemy1_crockdale(SIT305_Project2/302project2/Assets/NewSprites)
+License type: Attribution 4.0 International (CC BY 4.0)
+Author/Attribution: Crisisworks
+Source Website: https://opengameart.org/content/snappa-kappa, licensed by https://creativecommons.org/licenses/by/4.0/
 
-superman(character) https://opengameart.org/content/xeon-ultimate-smash-friends license by  https://creativecommons.org/licenses/by/3.0/
+Item name: character_beifen(SIT305_Project2/302project2/Assets/NewSprites)
+License type: Attribution 3.0 Unported (CC BY 3.0)
+Author/Attribution: JPhilipp
+Source Website: https://opengameart.org/content/700-sprites, licensed by https://creativecommons.org/licenses/by/3.0/
 
-Bat(enemey)https://opengameart.org/content/bat-32x32  license by https://opengameart.org/content/bat-32x32
+Item name: superman(SIT305_Project2/302project2/Assets/game_resourse/character/dragonbones)
+License type: Attribution 3.0 Unported (CC BY 3.0)
+Author/Attribution: Redshrike (Stephen Challener)
+Source Website: https://opengameart.org/content/xeon-ultimate-smash-friends, licensed by  https://creativecommons.org/licenses/by/3.0/
 
-Artwork created by Luis Zuno (@ansimuz)
-License (CC0) You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission: http://creativecommons.org/publicdomain/zero/1.0/
+Item name:Bat(SIT305_Project2/302project2/Assets/Resources/LB_Sprites)
+License type: CC0 1.0 Universal (CC0 1.0) 
+Author/Attribution: MoikMellah
+Source Website: https://opengameart.org/content/bat-32x32, licensed by https://opengameart.org/content/bat-32x32
 
-Artwork created by Luis Zuno (@ansimuz)
-License (CC0) You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission: http://creativecommons.org/publicdomain/zero/1.0/
+Item name: Bat1(SIT305_Project2/302project2/Assets/Resources/LB_Sprites)
+License type: OGA-BY 3.0
+Author/Attribution: bagzie
+Source Website: https://opengameart.org/content/bat-sprite, licensed by http://opengameart.org/content/oga-by-30-faq
 
-shining coin from https://opengameart.org/content/shining-coin-shining-health-shining-power-up-sprite-sheets, licenced by https://creativecommons.org/publicdomain/zero/1.0/
+Item name: Artwork(SIT305_Project2/302project2/Assets/NewSprites/bg1_layers)
+License type: CC0
+Author/Attribution: Luis Zuno
+Source Website: https://opengameart.org, licensed by: http://creativecommons.org/publicdomain/zero/1.0/
 
-Bat enemy from  https://opengameart.org/content/bat-sprite,licened by http://opengameart.org/content/oga-by-30-faq
+Item name: Artwork(SIT305_Project2/302project2/Assets/NewSprites/bg2_layers)
+License type: CC0
+Author/Attribution: Luis Zuno
+Source Website: https://opengameart.org, licensed by: http://creativecommons.org/publicdomain/zero/1.0/
 
-medicine from https://opengameart.org/content/rpg-potions-16x16  licened by http://opengameart.org/content/oga-by-30-faq
+Item name: shining coin(SIT305_Project2/302project2/Assets/game_resourse/Transparent PNG/Coin)
+License type: CC0 1.0 Universal
+Author/Attribution: bevouliin.com
+Source Website: https://opengameart.org/content/shining-coin-shining-health-shining-power-up-sprite-sheets, licensed by https://creativecommons.org/publicdomain/zero/1.0/
 
-enemy green monster and magic monster frrom https://opengameart.org/content/animated-orcs licened by licened by http://opengameart.org/content/oga-by-30-faq
+Item name: medicine(SIT305_Project2/302project2/Assets/game_resourse/new assets)
+License type: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+Author/Attribution: Bonsaiheldin
+Source Website: https://opengameart.org/content/rpg-potions-16x16, licensed by http://opengameart.org/content/oga-by-30-faq
 
-knight powerup frrom https://opengameart.org/content/2d-game-knight-character-sprite licened by licened by http://opengameart.org/content/oga-by-30-faq 
+Item name: enemy green monster and magic monster(SIT305_Project2/302project2/Assets/game_resourse/new assets)
+License type: Attribution 3.0 Unported (CC BY 3.0)
+Author/Attribution: Calciumtrice
+Source Website: https://opengameart.org/content/animated-orcs, licensed by http://opengameart.org/content/oga-by-30-faq
 
-slash effect from https://opengameart.org/content/slash-effect-collection licend by creativecommons.org/publicdomain/zero/1.0/
+Item name: knight power-up(SIT305_Project2/302project2/Assets/game_resourse/Transparent PNG/Power Ups)
+License type: OGA-BY 3.0
+Author/Attribution: craftpix.net
+Source Website: https://opengameart.org/content/2d-game-knight-character-sprite, licensed by http://opengameart.org/content/oga-by-30-faq 
 
-knight from https://opengameart.org/content/the-knight-free-sprite licenced by  creativecommons.org/publicdomain/zero/1.0/
+Item name: slash effect (SIT305_Project2/302project2/Assets/NewSprites)
+License type: CC0 1.0 Universal (CC0 1.0) 
+Author/Attribution: MetaShinryu
+Source Website: https://opengameart.org/content/slash-effect-collection, licensed by creativecommons.org/publicdomain/zero/1.0/
 
-fireball from https://opengameart.org/content/spell-icon-collection-part-3 licened by licened by http://opengameart.org/content/oga-by-30-faq
+Item name: knight (SIT305_Project2/302project2/Assets/game_resourse/button/character/png)
+License type: CC0 1.0 Universal (CC0 1.0)
+Author/Attribution: pzUH
+Source Website: https://opengameart.org/content/the-knight-free-sprite, licensed by  creativecommons.org/publicdomain/zero/1.0/
+
+Item name: fireball (SIT305_Project2/302project2/Assets/game_resourse/new assets/fireball)
+License type: Attribution 3.0 Unported (CC BY 3.0)
+Author/Attribution: Warlock's Gauntlet team
+Source Website: https://opengameart.org/content/spell-icon-collection-part-3, licensed by http://opengameart.org/content/oga-by-30-faq
 
