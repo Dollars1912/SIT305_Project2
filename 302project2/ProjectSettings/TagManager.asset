@@ -16,6 +16,10 @@ TagManager:
   - enemy
   - airwall
   - coin_level2
+  - boss
+  - playerattk
+  - superattk
+  - betterpowerup
   layers:
   - Default
   - TransparentFX
@@ -33,7 +37,7 @@ TagManager:
   - openbox
   - airwall
   - attck
-  - 
+  - fireball
   - 
   - 
   - 

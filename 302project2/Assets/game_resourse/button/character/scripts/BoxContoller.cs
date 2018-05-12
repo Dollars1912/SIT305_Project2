@@ -9,7 +9,8 @@ public class BoxContoller : MonoBehaviour
     public enum ChestState
     {
         Closed,
-        Reward,
+        Reward1,
+        Reward2,
         Empty
     }
 
@@ -17,7 +18,8 @@ public class BoxContoller : MonoBehaviour
 
     public GameObject ClosedChest;
     public GameObject OpenChest;
-    public GameObject Reward;
+    public GameObject Reward1;
+    public GameObject Reward2;
 
     public ChestState CurrentMode = ChestState.Closed;
 
@@ -30,18 +32,28 @@ public class BoxContoller : MonoBehaviour
             case ChestState.Closed:
                 ClosedChest.SetActive(true);
                 OpenChest.SetActive(false);
-                Reward.SetActive(false);
+                Reward1.SetActive(false);
+                Reward2.SetActive(false);
                 break;
-            case ChestState.Reward:
+            case ChestState.Reward1:
                 ClosedChest.SetActive(false);
                 OpenChest.SetActive(true);
                 Destroy(OpenChest, 1);
-                Reward.SetActive(true);
+                Reward1.SetActive(true);
+                Reward2.SetActive(false);
+                break;
+            case ChestState.Reward2:
+                ClosedChest.SetActive(false);
+                OpenChest.SetActive(true);
+                Destroy(OpenChest, 1);
+                Reward1.SetActive(false);
+                Reward2.SetActive(true);
                 break;
             case ChestState.Empty:
                 ClosedChest.SetActive(false);
                 OpenChest.SetActive(true);
-                Reward.SetActive(false);
+                Reward1.SetActive(false);
+                Reward2.SetActive(false);
                 Destroy(OpenChest, 1);
                 break;
         }
@@ -54,12 +66,16 @@ public class BoxContoller : MonoBehaviour
         switch (CurrentMode)
         {
             case ChestState.Closed:
-                CurrentMode = ChestState.Reward;
+                CurrentMode = ChestState.Reward1;
                 break;
           
             case ChestState.Empty:
                 break;
         }
+       /* if (ChestState.Closed = true)
+        {
+            CurrentMode = 
+        }*/
     }
 
  

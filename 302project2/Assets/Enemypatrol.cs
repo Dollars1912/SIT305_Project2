@@ -45,7 +45,7 @@ public class Enemypatrol : MonoBehaviour {
         Vector2 temp = rb.velocity;
         temp.x = speed;
         rb.velocity = temp;
-        anim.SetInteger("state",2);
+        anim.SetInteger("state",0);
     }
    public  void stopmoving()
     {
@@ -98,6 +98,7 @@ public class Enemypatrol : MonoBehaviour {
                  canturn = false;
                  origanalspeed = speed;
                  speed = 0;
+                anim.SetInteger("state",1);
 
                  StartCoroutine(Turnright(origanalspeed));
                 Debug.Log("why you not turn");

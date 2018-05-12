@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 
 public class fireballsponcer : MonoBehaviour {
@@ -35,8 +36,9 @@ public class fireballsponcer : MonoBehaviour {
     }
     IEnumerator spawnthunder()
     {
-
+        
         Instantiate(fireball,new Vector3(Random.Range(-16,78),this.gameObject.transform.position.y , 0), Quaternion.identity);
+        transform.DOMove(Knight.knights.gameObject.transform.position,0 , false);
         canSpawn = false;
         yield return new WaitForSeconds(spawnDelay);
 

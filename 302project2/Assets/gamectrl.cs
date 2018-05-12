@@ -70,6 +70,7 @@ public class gamectrl : MonoBehaviour {
             ui.txtCoinCount.text = "x" + data.coinCount;
             ui.level.text = "Level: " + data.level.ToString();
             data.health_now = data.health_total;
+        
             fs.Close();
         }
     }
@@ -83,12 +84,12 @@ public class gamectrl : MonoBehaviour {
         Debug.Log("data saved");
         Savedata();
     }
-    void ResetData()
+    public void ResetData()
     {
         FileStream fs = new FileStream(datafilepath, FileMode.Create);
         data.coinCount = 0;
         ui.txtCoinCount.text = "x 0";
-       
+        ui.exp.text = data.exp_percentage.ToString();
         data.health_total = 100;
         data.health_now = data.health_total;
         data.health_percentage = 1;

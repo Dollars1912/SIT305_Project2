@@ -252,6 +252,7 @@
   <ItemGroup>
     <Compile Include="Assets\attackctrl.cs" />
     <Compile Include="Assets\batactivater.cs" />
+    <Compile Include="Assets\bossai.cs" />
     <Compile Include="Assets\boxCtrl.cs" />
     <Compile Include="Assets\bulletsponer.cs" />
     <Compile Include="Assets\cameractrl.cs" />

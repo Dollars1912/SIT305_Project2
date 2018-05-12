@@ -7,4 +7,8 @@ public void Loadscene(string scenename)
     {
         SceneManager.LoadScene(scenename);
     }
+    public void resetscene()
+    {
+        gamectrl.gamecontrl.ResetData();
+    }
 }

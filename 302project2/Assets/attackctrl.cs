@@ -43,15 +43,25 @@ public class attackctrl : MonoBehaviour {
 
     public void changespeed()
     { 
-        if(Knight.knights.Ispowerpup == true&&Knight.knights.GetComponent<SpriteRenderer>().flipX==true)
+        if(Knight.knights.Ispowerpup == true&& Knight.knights.isbetterrpowerup == false && Knight.knights.GetComponent<SpriteRenderer>().flipX==true)
         {
             velocity = new Vector2(-10,0);
             Destroy(this.gameObject, 1f);
         }
-        else  if (Knight.knights.Ispowerpup == true && Knight.knights.GetComponent<SpriteRenderer>().flipX == false)
+        else  if (Knight.knights.Ispowerpup == true && Knight.knights.isbetterrpowerup == false && Knight.knights.GetComponent<SpriteRenderer>().flipX == false)
         {
                 velocity = new Vector2(10, 0);
             Destroy(this.gameObject, 1f);
+        }
+        if (Knight.knights.Ispowerpup == true && Knight.knights.isbetterrpowerup == true && Knight.knights.GetComponent<SpriteRenderer>().flipX == true)
+        {
+            velocity = new Vector2(-17, 0);
+            Destroy(this.gameObject, 2f);
+        }
+        else if (Knight.knights.Ispowerpup == true && Knight.knights.isbetterrpowerup == true && Knight.knights.GetComponent<SpriteRenderer>().flipX == false)
+        {
+            velocity = new Vector2(17, 0);
+            Destroy(this.gameObject, 2f);
         }
         else if (Knight.knights.Ispowerpup == false)
         {

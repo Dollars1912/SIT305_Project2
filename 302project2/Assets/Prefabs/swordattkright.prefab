@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 50243254325726006}
   m_Layer: 0
   m_Name: swordattkright
-  m_TagString: Untagged
+  m_TagString: playerattk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

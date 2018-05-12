@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114628747771241238}
   m_Layer: 11
   m_Name: flyingbat
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroybeedelay: 1.4
   beespeed: 2
+  health: 0
 --- !u!114 &114961862360955222
 MonoBehaviour:
   m_ObjectHideFlags: 1

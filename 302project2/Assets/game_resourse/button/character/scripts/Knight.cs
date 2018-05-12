@@ -15,7 +15,7 @@ public class Knight : MonoBehaviour {
     [Tooltip("this is a the gradient for horoizontal speed")]
 
     public float speedBoost = 5f;
-    public bool Ispowerpup ;
+    public bool Ispowerpup,isbetterrpowerup ;
     public float jumpspeed;
     public Transform feet;
     public float feetradius;
@@ -101,7 +101,7 @@ public class Knight : MonoBehaviour {
     {
         
         //make the player attck in facing derection
-        if (Ispowerpup == false)
+        if (Ispowerpup == false&&isbetterrpowerup == false)
         {
           
             if (sr.flipX)
@@ -117,7 +117,7 @@ public class Knight : MonoBehaviour {
                 Instantiate(swordattkright, swordattkrightPos.position, Quaternion.identity);
             }
         }
-        else if (Ispowerpup == true)
+        else if (Ispowerpup == true||isbetterrpowerup == true)
         {
             
             if (sr.flipX)
@@ -227,7 +227,12 @@ public class Knight : MonoBehaviour {
                 break;
             case "enemy":
                 // garabagectrl.SetActive(false);
+                gamectrl.gamecontrl.playerhurtanimation(gameObject);
+                break;
+            case "superattk":
+                // garabagectrl.SetActive(false);
                 gamectrl.gamecontrl.playerdiedanimation(gameObject);
+                SFXctrl.sfxcontrol.enemyexplode(this.gameObject.transform.position);
                 break;
             case "powerup":
                 Vector3 powerupPos = other.gameObject.transform.position;
@@ -235,6 +240,13 @@ public class Knight : MonoBehaviour {
                 Ispowerpup = true;
                 SFXctrl.sfxcontrol.ShowSparkle(powerupPos);
                 break;
+            case "betterpowerup":
+                Vector3 betterpowerupPos = other.gameObject.transform.position;
+                Destroy(other.gameObject);
+                isbetterrpowerup= true;
+                SFXctrl.sfxcontrol.ShowSparkle(betterpowerupPos);
+                break;
+      
             default:
                 break;
         }

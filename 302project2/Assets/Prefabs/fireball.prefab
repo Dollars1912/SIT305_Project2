@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114101587819254762}
   m_Layer: 15
   m_Name: fireball
-  m_TagString: water
+  m_TagString: superattk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
