@@ -10,6 +10,13 @@ public class DoorController : MonoBehaviour {
     public string ScaleAnimationName = "Scale";
     public string GoToLevel;
 
+    private MonsterCountController monsterCountController;
+
+    private void Awake()
+    {
+        monsterCountController = FindObjectOfType<MonsterCountController>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other == Knight.GetComponent<Collider2D>())
@@ -27,7 +34,9 @@ public class DoorController : MonoBehaviour {
         while (!Input.GetButton("Jump"))
             yield return null;
 
-        SceneManager.LoadScene(GoToLevel);
+        if (monsterCountController.IsAllMonsterDead())
+            SceneManager.LoadScene(GoToLevel);
+
 	}
 
     private void OnTriggerExit2D(Collider2D other)

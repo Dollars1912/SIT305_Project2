@@ -816,6 +816,7 @@
     <Compile Include="Assets\game_resourse\button\character\scripts\HPPotCountController.cs" />
     <Compile Include="Assets\game_resourse\button\character\scripts\Knight.cs" />
     <Compile Include="Assets\game_resourse\button\character\scripts\KnightModeController.cs" />
+    <Compile Include="Assets\game_resourse\button\character\scripts\MonsterCountController.cs" />
     <Compile Include="Assets\game_resourse\button\character\scripts\NPCController.cs" />
     <Compile Include="Assets\gamectrl.cs" />
     <Compile Include="Assets\gamedata.cs" />
