@@ -22,6 +22,9 @@ public class gamectrl : MonoBehaviour {
     
     BinaryFormatter bf;
     float timeleft;
+
+    private HPPotCountController potCountController;
+
     public enum value_Item
     {
         coin,bigcoin,enemy1,enemy2,enemy3,dead
@@ -34,8 +37,9 @@ public class gamectrl : MonoBehaviour {
         bf = new BinaryFormatter();
         //C:/Users/97290/Desktop/新建文件夹/SIT305_Project2
         datafilepath = "../data/game.dat";
-        
+        potCountController = FindObjectOfType<HPPotCountController>();
     }
+
     // Use this for initialization
     void Start ()
     {
@@ -55,12 +59,14 @@ public class gamectrl : MonoBehaviour {
             UpdateTimer();
         }
 	}
+
     public void Savedata()
     {
         FileStream fs = new FileStream(datafilepath, FileMode.Create);
         bf.Serialize(fs, data);
         fs.Close();
     }
+
     public void Loaddata()
     {
         if (File.Exists(datafilepath))
@@ -74,16 +80,20 @@ public class gamectrl : MonoBehaviour {
             fs.Close();
         }
     }
+
     private void OnEnable()
     {
         Debug.Log("data loaded");
         Loaddata();
+        potCountController.PotCount = data.medicine;
     }
+
     private void OnDisable()
     {
         Debug.Log("data saved");
         Savedata();
     }
+
     public void ResetData()
     {
         FileStream fs = new FileStream(datafilepath, FileMode.Create);
@@ -333,5 +343,33 @@ public class gamectrl : MonoBehaviour {
             Savedata();
             //Invoke("restartlevel", restrtdelay);
         }
+    }
+
+	public void IncrementPotCount()
+	{
+        data.medicine++;
+
+        potCountController.PotCount = data.medicine;
+        Savedata();
+	}
+
+	public void DecrementPotCount()
+	{
+        data.medicine--;
+		if (data.medicine < 0)
+			data.medicine = 0;
+
+		potCountController.PotCount = data.medicine;
+        Savedata();
+	}
+
+    public void UseHPPot()
+    {
+        DecrementPotCount();
+        data.health_now += 50;
+        if (data.health_now > data.health_total)
+            data.health_now = data.health_total;
+		 
+        updatehealth();
     }
 }

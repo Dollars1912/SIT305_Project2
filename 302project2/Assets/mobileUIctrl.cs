@@ -33,7 +33,7 @@ public class mobileUIctrl : MonoBehaviour {
     }
     public void mobildeHeal()
     {
-        //TODO
+        player.MobileHeal();   
     }
     // Update is called once per frame
     void Update () {

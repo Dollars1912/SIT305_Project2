@@ -58,19 +58,11 @@ public class Knight : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
             jump();
         if (Input.GetButtonDown("Fire1"))
-        {
             attck();
-        }
         if (leftpressed)
-        {
             Horizontalmoves(-speedBoost);
-
-        }
         if (rightprressed)
-        {
             Horizontalmoves(speedBoost);
-
-        }
     }   
 
 
@@ -155,6 +147,16 @@ public class Knight : MonoBehaviour {
         }
         
     }
+
+    void Heal()
+    {
+        var medicineCount = gamectrl.gamecontrl.data.medicine;
+        if (medicineCount > 0)
+        {
+            gamectrl.gamecontrl.UseHPPot();
+        }
+    }
+
     void EnableDoubleJump()
     {
         canDoubleJump = true;
@@ -200,6 +202,11 @@ public class Knight : MonoBehaviour {
     {
         jump();
     }
+    public void MobileHeal()
+    {
+        Heal();
+    }
+
     public void mobileright()
     {
         rightprressed = true;  

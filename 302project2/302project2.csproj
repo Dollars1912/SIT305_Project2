@@ -813,6 +813,7 @@
     <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrSynth.cs" />
     <Compile Include="Assets\game_resourse\button\character\scripts\BoxContoller.cs" />
     <Compile Include="Assets\game_resourse\button\character\scripts\DoorController.cs" />
+    <Compile Include="Assets\game_resourse\button\character\scripts\HPPotCountController.cs" />
     <Compile Include="Assets\game_resourse\button\character\scripts\Knight.cs" />
     <Compile Include="Assets\game_resourse\button\character\scripts\KnightModeController.cs" />
     <Compile Include="Assets\game_resourse\button\character\scripts\NPCController.cs" />
