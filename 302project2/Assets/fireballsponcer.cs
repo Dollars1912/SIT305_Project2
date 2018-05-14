@@ -8,41 +8,57 @@ public class fireballsponcer : MonoBehaviour {
 
     public GameObject fireball;
     public float spawnDelay;
-    public bool canSpawn;
-    public static fireballsponcer fireballsnponer;
-    private void Awake()
-    {
-        if (fireballsnponer == null)
-            fireballsnponer = this;
-      
+    public bool canSpawn,iscollide;
+    Vector3 fireballrange;
 
-    }
+
     // Use this for initialization
     void Start()
     {
-        
-        //canSpawn = true;
+
+        canSpawn = true;
+        fireballrange = new Vector3(Random.Range(-10, 137), 46, 0);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+      if (canSpawn)
+        {
+            changepoint();
+            StartCoroutine(spawnfireball(fireballrange));
+            
+        }
     }
-    public void releasefireball()
+    IEnumerator spawnfireball(Vector3 fireballarange)
     {
-        canSpawn = true;
-        StartCoroutine(spawnthunder());
-    }
-    IEnumerator spawnthunder()
-    {
-        
-        Instantiate(fireball,new Vector3(Random.Range(-16,78),this.gameObject.transform.position.y , 0), Quaternion.identity);
-        transform.DOMove(Knight.knights.gameObject.transform.position,0 , false);
+        Instantiate(fireball, fireballarange, Quaternion.identity);
         canSpawn = false;
         yield return new WaitForSeconds(spawnDelay);
-
         canSpawn = true;
         Debug.Log("fireball!!!1");
+    }
+    void changepoint()
+    {
+        if (iscollide == true)
+        { fireballrange = new Vector3(Random.Range(33, 57), 46, 0);
+        }
+        else if (iscollide == false)
+        {
+            fireballrange = new Vector3(Random.Range(-10, 137), 46, 0);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            iscollide = true;
+        }
+        else if((collision.gameObject.CompareTag("Player")==false))
+        {
+            iscollide = false;
+        }
+      
     }
 }

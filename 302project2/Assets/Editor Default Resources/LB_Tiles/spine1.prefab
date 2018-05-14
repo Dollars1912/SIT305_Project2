@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212945399474989614}
   m_Layer: 0
   m_Name: spine1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

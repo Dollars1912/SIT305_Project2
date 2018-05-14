@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class fireballctrl : MonoBehaviour {
     public float dropspeed;
@@ -8,7 +9,7 @@ public class fireballctrl : MonoBehaviour {
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
-
+    
     // Use this for initialization
     void Start()
     {
@@ -23,10 +24,7 @@ public class fireballctrl : MonoBehaviour {
     {
 
     }
-    void attk()
-    {
-        
-    }
+   
 
     /*IEnumerator releasefireball()
     {
@@ -43,7 +41,9 @@ public class fireballctrl : MonoBehaviour {
     public void fireball()
     {
         rb.AddForce(new Vector2(movespeed, dropspeed));
+        
     }
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player")|| collision.gameObject.CompareTag("ground"))

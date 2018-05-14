@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class attackctrl : MonoBehaviour {
- 
+
+    public Sprite newimage;
     Rigidbody2D rib; 
    Vector2 velocity;
+    SpriteRenderer sr;
     public static attackctrl attackcontrl;
     private void Awake()
     {
@@ -16,6 +18,7 @@ public class attackctrl : MonoBehaviour {
     }
     void Start () {
         rib= GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         changespeed();
     }
     private void Update()
@@ -35,7 +38,7 @@ public class attackctrl : MonoBehaviour {
         }
         else if (collision.gameObject.CompareTag("enemy"))
         {
-            gamectrl.gamecontrl.hitenemy(collision.gameObject.transform);
+           
             Destroy(gameObject);
         }
       
@@ -55,6 +58,7 @@ public class attackctrl : MonoBehaviour {
         }
         if (Knight.knights.Ispowerpup == true && Knight.knights.isbetterrpowerup == true && Knight.knights.GetComponent<SpriteRenderer>().flipX == true)
         {
+            sr.sprite = newimage;
             velocity = new Vector2(-17, 0);
             Destroy(this.gameObject, 2f);
         }
@@ -65,7 +69,7 @@ public class attackctrl : MonoBehaviour {
         }
         else if (Knight.knights.Ispowerpup == false)
         {
-            Destroy(this.gameObject, 0.5f);
+            Destroy(this.gameObject, 0.2f);
         }
 
 

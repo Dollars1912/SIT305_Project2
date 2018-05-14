@@ -122,19 +122,13 @@ public class gamectrl : MonoBehaviour {
         checkhealth();
         // Invoke("restartlevel", restrtdelay);
     }
-    public void playerhurtanimation(GameObject player)
+    public void playerhurtanimation(GameObject player,GameObject enemy)
     {
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(-3000f, 400f));
-        player.GetComponent<Knight>().enabled = false;
-        ///player.GetComponent<Collider2D>().enabled = false;
-   
-       // rb.velocity = Vector2.zero;
-        /*foreach(Transform child in player.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
-        Camera.main.GetComponent<cameractrl>().enabled = false;*/
+        playerhurt(player);
+        //player.GetComponent<Collider2D>().enabled = false;
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>());
+        rb.AddForce(new Vector2(-1000f, 0));
         StartCoroutine("pausebeforeload",player);
       
     }
@@ -159,11 +153,11 @@ public class gamectrl : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         playerdied(player);
     }
-    IEnumerator pausebeforeload(GameObject player)
+    IEnumerator pausebeforeload(GameObject player,GameObject enemy)
     {
-        yield return new WaitForSeconds(0.5f);
-        player.GetComponent<Knight>().enabled = true;
-        playerhurt(player);
+        yield return new WaitForSeconds(1f);
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>(),false);
+        
     }
     public void playerhurt(GameObject player)
     {
@@ -181,13 +175,13 @@ public class gamectrl : MonoBehaviour {
     /// <summary>
     /// restart level when player dies
     /// </summary>
-    void restartlevel()
+    /*void restartlevel()
     {
-        SceneManager.LoadScene("level2");
-    }
+        SceneManager.
+    }*/
     void Gameover()
     {
-        SceneManager.LoadScene("level2");
+        SceneManager.LoadScene("startPoint");
     }
     void UpdateTimer()
     {
@@ -348,9 +342,20 @@ public class gamectrl : MonoBehaviour {
 	public void IncrementPotCount()
 	{
         data.medicine++;
+        data.coinCount -= 100;
+        ui.txtCoinCount.text = data.coinCount.ToString();
 
-        potCountController.PotCount = data.medicine;
-        Savedata();
+        if (data.coinCount <= 100)
+        {
+            Debug.Log("I Dont have enough money");
+            return;
+        }
+        else {
+            potCountController.PotCount = data.medicine;
+           
+            Savedata();
+        }
+        
 	}
 
 	public void DecrementPotCount()

@@ -25,7 +25,6 @@ public class Knight : MonoBehaviour {
     public LayerMask whatIsground;
     public Transform swordattkleftPos, swordattkrightPos;
     public bool SFXison;
-    public GameObject garabagectrl;
     //rightbulletspawnsPos, leftbulletspownsPos;
     public GameObject swordattkleft, swordattkright;
     //leftattkbullet, rightbullet
@@ -173,7 +172,7 @@ public class Knight : MonoBehaviour {
 
             Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
            
-            gamectrl.gamecontrl.playerdiedanimation(gameObject);
+            gamectrl.gamecontrl.playerhurtanimation(gameObject,other.gameObject);
           //  yield return new WaitForSeconds(1.4f);
             anim.SetInteger("state", 1);
             Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>(),false);
@@ -234,7 +233,7 @@ public class Knight : MonoBehaviour {
                 break;
             case "enemy":
                 // garabagectrl.SetActive(false);
-                gamectrl.gamecontrl.playerhurtanimation(gameObject);
+                gamectrl.gamecontrl.playerhurtanimation(gameObject,other.gameObject);
                 break;
             case "superattk":
                 // garabagectrl.SetActive(false);
@@ -245,12 +244,14 @@ public class Knight : MonoBehaviour {
                 Vector3 powerupPos = other.gameObject.transform.position;
                 Destroy(other.gameObject);
                 Ispowerpup = true;
+                KnightModeController.knightmodectrl.currentMode = KnightModeController.KnightMode.Medium;
                 SFXctrl.sfxcontrol.ShowSparkle(powerupPos);
                 break;
             case "betterpowerup":
                 Vector3 betterpowerupPos = other.gameObject.transform.position;
                 Destroy(other.gameObject);
                 isbetterrpowerup= true;
+                KnightModeController.knightmodectrl.currentMode = KnightModeController.KnightMode.Medium;
                 SFXctrl.sfxcontrol.ShowSparkle(betterpowerupPos);
                 break;
       

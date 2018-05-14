@@ -30,52 +30,48 @@ public class BoxContoller : MonoBehaviour
         switch (CurrentMode)
         {
             case ChestState.Closed:
-                ClosedChest.SetActive(true);
-                OpenChest.SetActive(false);
+                ClosedChest.SetActive(true);                
                 Reward1.SetActive(false);
                 Reward2.SetActive(false);
                 break;
             case ChestState.Reward1:
                 ClosedChest.SetActive(false);
-                OpenChest.SetActive(true);
                 Destroy(OpenChest, 1);
                 Reward1.SetActive(true);
                 Reward2.SetActive(false);
                 break;
             case ChestState.Reward2:
                 ClosedChest.SetActive(false);
-                OpenChest.SetActive(true);
                 Destroy(OpenChest, 1);
                 Reward1.SetActive(false);
                 Reward2.SetActive(true);
                 break;
             case ChestState.Empty:
                 ClosedChest.SetActive(false);
-                OpenChest.SetActive(true);
+                Destroy(OpenChest, 1);
                 Reward1.SetActive(false);
                 Reward2.SetActive(false);
-                Destroy(OpenChest, 1);
                 break;
         }
     }
 
-
+   
 
     public void OnTriggered()
     {
         switch (CurrentMode)
         {
             case ChestState.Closed:
-                CurrentMode = ChestState.Reward1;
+                if (Knight.knights.Ispowerpup == false)
+                    CurrentMode = ChestState.Reward1;
+                else //(Knight.knights.Ispowerpup == true)
+                    CurrentMode = ChestState.Reward2;
                 break;
           
             case ChestState.Empty:
                 break;
         }
-       /* if (ChestState.Closed = true)
-        {
-            CurrentMode = 
-        }*/
+
     }
 
  

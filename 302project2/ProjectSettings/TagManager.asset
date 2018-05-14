@@ -20,6 +20,7 @@ TagManager:
   - playerattk
   - superattk
   - betterpowerup
+  - gc
   layers:
   - Default
   - TransparentFX

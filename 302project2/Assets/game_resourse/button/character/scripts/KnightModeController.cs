@@ -4,30 +4,50 @@ using UnityEngine;
 
 public class KnightModeController : MonoBehaviour
 {
-	#region State enum
-	public enum KnightMode
+    public static KnightModeController knightmodectrl;
+    private void Awake()
+    {
+        if (knightmodectrl == null)
+            knightmodectrl = this;
+
+
+    }
+    public enum KnightMode
 	{
 		Short,
 		Medium,
 		Long
 	}
-    #endregion
-
-    #region Inspector Fields
+   
 
     public SpriteRenderer KnightSpriteRender;
 
-	#endregion
 
-    #region Private Fields
 
     // TODO hook this currentMode field with the game controller.
     // TODO change it back to private
     public KnightMode currentMode;
+       
 
-    #endregion
+    
+    void setmode()
+    {
+        if(Knight.knights.Ispowerpup == true&& Knight.knights.isbetterrpowerup == false)
+        {
+            currentMode = KnightMode.Medium;
 
-    #region Unity Hook
+        }
+        if (Knight.knights.Ispowerpup == true && Knight.knights.isbetterrpowerup == true)
+        {
+            currentMode = KnightMode.Long;
+
+        }
+        if (Knight.knights.Ispowerpup == false && Knight.knights.isbetterrpowerup == false)
+        {
+            currentMode = KnightMode.Short;
+
+        }
+    }
 
     void FixedUpdate()
     {
@@ -45,5 +65,4 @@ public class KnightModeController : MonoBehaviour
         }
     }
 
-    #endregion
 }
