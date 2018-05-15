@@ -401,8 +401,6 @@
     <None Include="Assets\Sprites\Actors\Enemies\monster_round\get more at bevouliin_dot_com.txt" />
     <None Include="Assets\Sprites\Actors\Enemies\monster_sqaure\get more at bevouliin_dot_com.txt" />
     <None Include="Assets\Sprites\Actors\Enemies\monster_tiger\get more at bevouliin_dot_com.txt" />
-    <None Include="Assets\game_resourse\new assets\Knight-Characters-Free-Sprite\README.txt" />
-    <None Include="Assets\game_resourse\new assets\last-guardian-sprites\readme.txt" />
     <None Include="Assets\game_resourse\new assets\living-tissue-platform-files\license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

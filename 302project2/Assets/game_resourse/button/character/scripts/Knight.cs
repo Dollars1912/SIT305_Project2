@@ -251,7 +251,7 @@ public class Knight : MonoBehaviour {
                 Vector3 betterpowerupPos = other.gameObject.transform.position;
                 Destroy(other.gameObject);
                 isbetterrpowerup= true;
-                KnightModeController.knightmodectrl.currentMode = KnightModeController.KnightMode.Medium;
+                KnightModeController.knightmodectrl.currentMode = KnightModeController.KnightMode.Long;
                 SFXctrl.sfxcontrol.ShowSparkle(betterpowerupPos);
                 break;
       

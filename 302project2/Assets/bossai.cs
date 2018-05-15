@@ -15,8 +15,8 @@ public class bossai : MonoBehaviour {
     Rigidbody2D rb;
     SpriteRenderer sr;
     Vector3 bulleySpwonsPos;
-    bool canfire, isjumping;
-        
+    bool canfire, isjumping,isdead;
+    public GameObject enemy;
 
 
 	// Use this for initialization
@@ -59,6 +59,16 @@ public class bossai : MonoBehaviour {
     {
         Instantiate(bossfireball, new Vector3(Random.Range(-6, 33), 5.701f, 0), Quaternion.identity);
         Invoke("reload", delayforfiring);
+    }
+    void bossdied()
+    {
+        if (health <= 0)
+        {
+            isdead = true;
+            Destroy(enemy);
+            Instantiate(bossfireball,this.transform.position, Quaternion.identity);
+
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
 

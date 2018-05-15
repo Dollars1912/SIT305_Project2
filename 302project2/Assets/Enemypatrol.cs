@@ -45,13 +45,9 @@ public class Enemypatrol : MonoBehaviour {
         Vector2 temp = rb.velocity;
         temp.x = speed;
         rb.velocity = temp;
-        anim.SetInteger("state",0);
+
     }
-   public  void stopmoving()
-    {
-        
-        anim.SetInteger("state", 0);
-    }
+
     void SetStarrtingdirection()
     {
         if (speed > 0)
@@ -82,7 +78,7 @@ public class Enemypatrol : MonoBehaviour {
            
             if (canturn)
             {
-                stopmoving();
+               
                 canturn = false;
                 origanalspeed = speed;
                 speed = 0;
@@ -94,7 +90,7 @@ public class Enemypatrol : MonoBehaviour {
         {
             if (canturn)
             {
-                 stopmoving();
+      
                  canturn = false;
                  origanalspeed = speed;
                  speed = 0;
