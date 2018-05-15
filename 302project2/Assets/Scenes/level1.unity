@@ -38395,11 +38395,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4907808251311074, guid: 93a0bdad7f04c4eb4b380f51663c401d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -14.1
+      value: -24.2
       objectReference: {fileID: 0}
     - target: {fileID: 4907808251311074, guid: 93a0bdad7f04c4eb4b380f51663c401d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.28
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4907808251311074, guid: 93a0bdad7f04c4eb4b380f51663c401d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -38430,6 +38430,16 @@ Prefab:
       propertyPath: garabagectrl
       value: 
       objectReference: {fileID: 903244437}
+    - target: {fileID: 114487806070137864, guid: 93a0bdad7f04c4eb4b380f51663c401d,
+        type: 2}
+      propertyPath: Ispowerpup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223168022970722, guid: 93a0bdad7f04c4eb4b380f51663c401d,
+        type: 2}
+      propertyPath: currentMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93a0bdad7f04c4eb4b380f51663c401d, type: 2}
   m_IsPrefabParent: 0

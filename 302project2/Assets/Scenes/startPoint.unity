@@ -27044,6 +27044,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114487806070137864, guid: 93a0bdad7f04c4eb4b380f51663c401d,
+        type: 2}
+      propertyPath: Ispowerpup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223168022970722, guid: 93a0bdad7f04c4eb4b380f51663c401d,
+        type: 2}
+      propertyPath: currentMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93a0bdad7f04c4eb4b380f51663c401d, type: 2}
   m_IsPrefabParent: 0
@@ -56517,7 +56527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -31.661005, y: 26.637281}
+  scrollPos: {x: -31.661005, y: 46.604053}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 496
@@ -56529,9 +56539,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1864506627}
-  selectedCommands:
-  - {fileID: 1864506612}
+  - {fileID: 1864506603}
+  selectedCommands: []
   variables:
   - {fileID: 1864506623}
   description: 
@@ -56829,7 +56838,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 389.39886
-    y: 262.88074
+    y: 261.21683
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}

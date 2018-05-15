@@ -76,7 +76,12 @@ public class gamectrl : MonoBehaviour {
             ui.txtCoinCount.text = "x" + data.coinCount;
             ui.level.text = "Level: " + data.level.ToString();
             data.health_now = data.health_total;
-        
+            if (data.exp_percentage > 0)
+            {
+                data.exp_percentage = data.exp_percentage - (data.level - 1) * 100;
+            }
+            else { data.exp_percentage = 0f; }
+            ui.exp.text = data.exp_percentage.ToString()+" %";     
             fs.Close();
         }
     }
@@ -96,10 +101,10 @@ public class gamectrl : MonoBehaviour {
 
     public void ResetData()
     {
-        FileStream fs = new FileStream(datafilepath, FileMode.Create);
+        
+        FileStream fs = new FileStream(datafilepath, FileMode.Open,FileAccess.ReadWrite,FileShare.None);
         data.coinCount = 0;
         ui.txtCoinCount.text = "x 0";
-        ui.exp.text = data.exp_percentage.ToString();
         data.health_total = 100;
         data.health_now = data.health_total;
         data.health_percentage = 1;
@@ -107,15 +112,19 @@ public class gamectrl : MonoBehaviour {
         data.exp_total = 100;
         data.exp_percentage = 0;
         data.level = 1;
+        Knight.knights.Ispowerpup = false;
+        Knight.knights.isbetterrpowerup = false;
+        ui.level.text = "Level: "+data.level.ToString();
         updatehealth();
         updateexp();
         bf.Serialize(fs, data);
         fs.Close();
-        Debug.Log("has been reset");
     }
 
     public void playerdied(GameObject player)
     {
+        Knight.knights.Ispowerpup = false;
+        Knight.knights.isbetterrpowerup = false;
         player.SetActive(false);
         loselife();
         gainexp(value_Item.dead);
