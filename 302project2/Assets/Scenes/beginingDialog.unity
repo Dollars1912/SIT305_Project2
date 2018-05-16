@@ -166,8 +166,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
@@ -301,8 +301,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
@@ -372,8 +372,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
@@ -462,8 +462,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -484,8 +484,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -538,8 +538,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f6478b25a400c642b2dee75f022ab12, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   portraitCanvas: {fileID: 611373897}
   dimPortraits: 1
   dimColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -593,8 +593,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b8a0b7b25ea43e468e561a8492e46f9, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &743834682
 Transform:
   m_ObjectHideFlags: 0
@@ -634,15 +634,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   nameText: ???
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0
   setSayDialog: {fileID: 0}
-  description:
+  description: 
 --- !u!4 &805438958
 Transform:
   m_ObjectHideFlags: 0
@@ -682,8 +682,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   nameText: player
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
@@ -691,7 +691,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7da4481170a2a464db2c2f037f70d4a5, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
-  description:
+  description: 
 --- !u!4 &818423402
 Transform:
   m_ObjectHideFlags: 0
@@ -797,11 +797,11 @@ GameObject:
   - component: {fileID: 909573075}
   - component: {fileID: 909573081}
   - component: {fileID: 909573082}
-  - component: {fileID: 909573083}
   - component: {fileID: 909573084}
   - component: {fileID: 909573076}
   - component: {fileID: 909573078}
   - component: {fileID: 909573079}
+  - component: {fileID: 909573083}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -818,8 +818,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
   spriteRenderer: {fileID: 830834622}
@@ -841,8 +841,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
   display: 1
@@ -870,8 +870,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
   storyText: 'Its time to weak up.{wc}
@@ -879,7 +879,7 @@ MonoBehaviour:
     People need you, world need you. We dont have much time. Demons are coming{wc}
 
     Go east and save us.... wake up... wake up....{wc}'
-  description:
+  description: 
   character: {fileID: 805438957}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
@@ -901,8 +901,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   parentBlock: {fileID: 909573072}
   waitForFrames: 1
 --- !u!114 &909573072
@@ -915,25 +915,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
     x: 65.13636
-    y: 105.27273
+    y: 104.09626
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 0
   blockName: New Block
-  description:
+  description: 
   eventHandler: {fileID: 909573071}
   commandList:
   - {fileID: 909573084}
   - {fileID: 909573070}
   - {fileID: 909573075}
-  - {fileID: 909573083}
   - {fileID: 909573068}
   - {fileID: 909573080}
   - {fileID: 909573076}
@@ -942,6 +941,7 @@ MonoBehaviour:
   - {fileID: 909573081}
   - {fileID: 909573078}
   - {fileID: 909573082}
+  - {fileID: 909573083}
   - {fileID: 909573079}
 --- !u!114 &909573073
 MonoBehaviour:
@@ -953,14 +953,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 28.189781, y: 66.27265}
+  scrollPos: {x: 41.222992, y: 76.87176}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.8800001
+  zoom: 0.85000014
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -970,14 +970,14 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 909573072}
   selectedCommands:
-  - {fileID: 909573079}
+  - {fileID: 909573083}
   variables: []
-  description:
+  description: 
   stepPause: 0
   colorCommands: 1
   hideComponents: 1
   saveSelection: 1
-  localizationId:
+  localizationId: 
   showLineNumbers: 0
   hideCommands: []
   luaEnvironment: {fileID: 0}
@@ -1004,12 +1004,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
   storyText: "{punch=40,0.5}WEAK UP NOW !! \n"
-  description:
+  description: 
   character: {fileID: 805438957}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
@@ -1030,12 +1030,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
   storyText: WHO is talking to me?!
-  description:
+  description: 
   character: {fileID: 818423401}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
@@ -1056,14 +1056,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
   storyText: 'Ahhh!!!!{wc}
 
     This dream again! What dose it mean? And who is talking to me?'
-  description:
+  description: 
   character: {fileID: 818423401}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
@@ -1084,14 +1084,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
   storyText: 'Sky turned to red!{wc}
 
     It seems... I have to go east as that voice said...'
-  description:
+  description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
@@ -1105,22 +1105,22 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &909573079
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909573067}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
   _sceneName:
     stringRef: {fileID: 0}
     stringVal: startPoint
   loadingImage: {fileID: 2800000, guid: fc15b1331e6759e4b83bd002e6cfd2e3, type: 3}
-  sceneNameOLD:
+  sceneNameOLD: 
 --- !u!114 &909573080
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1130,14 +1130,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
   storyText: 'What!{w=0.3}{punch=50,0.5}
 
 '
-  description:
+  description: 
   character: {fileID: 818423401}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
@@ -1158,8 +1158,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
   spriteRenderer: {fileID: 830834622}
@@ -1181,8 +1181,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
   display: 2
@@ -1203,21 +1203,17 @@ MonoBehaviour:
   waitUntilFinished: 1
 --- !u!114 &909573083
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909573067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  itemId: 12
+  m_Script: {fileID: 11500000, guid: b359b09a7ba2e4af981f07c07f8af85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
   indentLevel: 0
-  musicClip: {fileID: 8300000, guid: 69d43fb74288d44f2bb970988968c0c7, type: 3}
-  atTime: 0
-  loop: 1
-  fadeDuration: 1
 --- !u!114 &909573084
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1227,11 +1223,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  musicClip: {fileID: 8300000, guid: 6e5b7911a8c944bc0a90da7d324e1820, type: 3}
+  musicClip: {fileID: 8300000, guid: faa4612ab29ecf14fa0ddb17d97e5e75, type: 3}
   atTime: 0
   loop: 1
   fadeDuration: 1
@@ -1362,8 +1358,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
@@ -1412,8 +1408,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   selectedFlowchart: {fileID: 909573073}
 --- !u!4 &1385072435
 Transform:
@@ -1455,8 +1451,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_ForceModuleActive: 0
 --- !u!114 &1539446292
 MonoBehaviour:
@@ -1467,8 +1463,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1485,8 +1481,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5

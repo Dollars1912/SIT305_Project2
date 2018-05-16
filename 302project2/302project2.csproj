@@ -248,9 +248,17 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="ChannelPurchase">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.xiaomi@1.0.0/UnityChannel/ChannelPurchase.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityStore">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.xiaomi@1.0.0/UnityChannel/UnityStore.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\attackctrl.cs" />
+    <Compile Include="Assets\audioctrl.cs" />
+    <Compile Include="Assets\AudioFX.cs" />
     <Compile Include="Assets\batactivater.cs" />
     <Compile Include="Assets\bossai.cs" />
     <Compile Include="Assets\boxCtrl.cs" />
@@ -802,6 +810,7 @@
     <Compile Include="Assets\menucontrol.cs" />
     <Compile Include="Assets\mobileUIctrl.cs" />
     <Compile Include="Assets\openboxctrl.cs" />
+    <Compile Include="Assets\router.cs" />
     <Compile Include="Assets\scroll.cs" />
     <Compile Include="Assets\SFXctrl.cs" />
     <Compile Include="Assets\SFXgroup.cs" />
@@ -810,9 +819,9 @@
     <Compile Include="Assets\Talkable.cs" />
     <Compile Include="Assets\thunder.cs" />
     <Compile Include="Assets\UIctrl.cs" />
+    <Compile Include="Packages\com.unity.xiaomi\UnityChannel\XiaomiSupport\AppStoreSettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Audio\Audio Credits.txt" />
     <None Include="Assets\Demigiant\DOTween\DOTween.XML" />
     <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
     <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />

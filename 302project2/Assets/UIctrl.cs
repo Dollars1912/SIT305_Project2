@@ -19,5 +19,8 @@ public class UIctrl {
     public Image img_health;
     public Image img_exp;
 
+    [Header("Pause_panel")]
+    public GameObject panelPause;
+    public GameObject mobileui;
 
 }

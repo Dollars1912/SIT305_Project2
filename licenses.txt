@@ -84,3 +84,12 @@ License type: Attribution 3.0 Unported (CC BY 3.0)
 Author/Attribution: Warlock's Gauntlet team
 Source Website: https://opengameart.org/content/spell-icon-collection-part-3, licensed by http://opengameart.org/content/oga-by-30-faq
 
+Item name: BGmusic(https://opengameart.org/content/oves-essential-game-audio-pack-collection-160-files-updated)
+License type: Attribution 3.0 Unported (CC BY 3.0)
+Author/Attribution: OveMelaa
+Source Website: https://opengameart.org/content/spell-icon-collection-part-3, licensed by http://opengameart.org/content/oga-by-30-faq
+
+Item name: DialogBGmusic(https://opengameart.org/content/oves-essential-game-audio-pack-collection-160-files-updated)
+License type: Attribution 3.0 Unported (CC BY 3.0)
+Author/Attribution: OveMelaa
+Source Website: https://opengameart.org/content/spell-icon-collection-part-3, licensed by http://opengameart.org/content/oga-by-30-faq

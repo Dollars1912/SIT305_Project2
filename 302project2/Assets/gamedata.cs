@@ -15,6 +15,5 @@ public class gamedata {
     public int level;
     public bool isFirstBoot;
     public int medicine;
-    public int[] keys;
 
 }

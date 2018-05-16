@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 using System;
+using DG.Tweening;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.UI;
 
 public class gamectrl : MonoBehaviour {
     public static gamectrl gamecontrl;
     public float restrtdelay;
+   // [HideInInspector]
     public gamedata data;
     public UIctrl ui;
     public GameObject bigcoin;
@@ -19,10 +21,9 @@ public class gamectrl : MonoBehaviour {
     public int bigcoinvalue;
     public int enemyvalue;
     string datafilepath;
-
     BinaryFormatter bf;
     float timeleft;
-
+    bool ispause;
     private HPPotCountController potCountController;
 
     public enum value_Item
@@ -44,6 +45,7 @@ public class gamectrl : MonoBehaviour {
     void Start ()
     {
         timeleft = Maxtime;
+        ispause = false;
         HandleFirstBoot();
         updatehealth();
         updateexp();
@@ -52,19 +54,31 @@ public class gamectrl : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-            ResetData();
         if (timeleft > 0)
         {
             UpdateTimer();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            ResetData();
+
+        if (ispause)
+        {
+            Time.timeScale = 0;
+        }
+        else if(ispause == false)
+        {
+            Time.timeScale = 1;
+        }
+     
+
 	}
 
     public void Savedata()
     {
         FileStream fs = new FileStream(datafilepath, FileMode.Create);
         bf.Serialize(fs, data);
+        
         fs.Close();
     }
 
@@ -97,6 +111,7 @@ public class gamectrl : MonoBehaviour {
     {
         Debug.Log("data saved");
         Savedata();
+        Time.timeScale = 1;
     }
     public void setfirstboot(bool firstboost)
     {
@@ -121,6 +136,7 @@ public class gamectrl : MonoBehaviour {
         data.exp_total = 100;
         data.exp_percentage = 0;
         data.level = 1;
+        timeleft = Maxtime;
         ui.txtCoinCount.text = "x 0";
         ui.exp.text = data.exp_percentage.ToString();
         ui.level.text = "Level: " + data.level.ToString();
@@ -209,7 +225,7 @@ public class gamectrl : MonoBehaviour {
         if (timeleft <= 0)
         {
             ui.txtTimer.text = "dead is coming!";
-            GameObject player = GameObject.FindGameObjectWithTag("Player") as GameObject;
+           GameObject player = GameObject.FindGameObjectWithTag("Player") as GameObject;
             playerdied(player);
         }
     }
@@ -385,5 +401,27 @@ public class gamectrl : MonoBehaviour {
             data.health_now = data.health_total;
 
         updatehealth();
+    }
+    public void showPause()
+    {
+        if (ui.mobileui.activeInHierarchy)
+            ui.mobileui.SetActive(false);
+        ui.panelPause.SetActive(true);
+        ui.panelPause.gameObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0,0), 0.7f, false);
+        Invoke("Setpause", 1.1f);
+    }
+    void Setpause()
+    {
+        //set the bool
+        ispause = true;
+    }
+    public void hidePause()
+    {
+        ispause = false;
+        if (!ui.mobileui.activeInHierarchy)
+            ui.mobileui.SetActive(true);
+         ui.panelPause.SetActive(false);
+        ui.panelPause.gameObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 630), 0.7f, false);
+       
     }
 }

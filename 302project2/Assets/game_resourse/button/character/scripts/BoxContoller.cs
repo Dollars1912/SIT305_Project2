@@ -23,34 +23,44 @@ public class BoxContoller : MonoBehaviour
 
     public ChestState CurrentMode = ChestState.Closed;
 
- //Unity Hook
+    //Unity Hook
 
+    private void Start()
+    {
+        CurrentMode = ChestState.Closed;
+  
+    }
     void FixedUpdate()
     {
         switch (CurrentMode)
         {
             case ChestState.Closed:
-                ClosedChest.SetActive(true);                
+                ClosedChest.SetActive(true);
+                OpenChest.SetActive(false);
                 Reward1.SetActive(false);
                 Reward2.SetActive(false);
                 break;
             case ChestState.Reward1:
                 ClosedChest.SetActive(false);
-                Destroy(OpenChest, 1);
+                OpenChest.SetActive(false);
                 Reward1.SetActive(true);
+                Instantiate(Reward1, OpenChest.transform.position, Quaternion.identity);
                 Reward2.SetActive(false);
                 break;
             case ChestState.Reward2:
                 ClosedChest.SetActive(false);
-                Destroy(OpenChest, 1);
+                OpenChest.SetActive(false);
                 Reward1.SetActive(false);
                 Reward2.SetActive(true);
+                Instantiate(Reward2, OpenChest.transform.position, Quaternion.identity);
+
                 break;
             case ChestState.Empty:
                 ClosedChest.SetActive(false);
-                Destroy(OpenChest, 1);
+                OpenChest.SetActive(false);
                 Reward1.SetActive(false);
                 Reward2.SetActive(false);
+       
                 break;
         }
     }
@@ -63,9 +73,17 @@ public class BoxContoller : MonoBehaviour
         {
             case ChestState.Closed:
                 if (Knight.knights.Ispowerpup == false)
-                    CurrentMode = ChestState.Reward1;
-                else //(Knight.knights.Ispowerpup == true)
+                {
+                CurrentMode = ChestState.Reward1;
+                
+                }
+                  
+                else if (Knight.knights.Ispowerpup == true)
+                {
                     CurrentMode = ChestState.Reward2;
+                
+                }
+                    
                 break;
           
             case ChestState.Empty:
