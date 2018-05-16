@@ -1,4 +1,5 @@
 #SIT305_Project2#
+
 APP Title: Mystic territory
 
 Team Members: Lawrence Chu (215194361)/ Dante He (215330413)
@@ -43,3 +44,24 @@ Depth of BG field and movable background: Depth of BG field can fit the Backgrou
 Reward system/ Randomly drop equipment or props: We randomly set the drop system in the game, player can get reward when defeating an enemy or opening a treasure chest which increased playability of the game.
 
 Different emenies: Added different tpyes of enemies into different levels. Different attack modes, HP values, movement mode.
+
+API:
+Level designer: Easier to make a level map. And add the collision value to the objects.
+
+Fungus: 
+Great for making Visual Novel, Interactive Fiction, RPG, Point & Click & eLearning games.
+- 100% Free
+- No programming required!
+- Powerful branching conversation system
+- Works with Unity’s new GUI system
+- Trigger effects mid-sentence with tags
+- Intuitive Flowchart-based visual editor
+- Variables, save / load, if & while conditions 
+- Translation support
+- Lua scripting system built in (FungusLua) - Export story to a text file for easy editing
+- Clickable objects and drag-and-drop
+- Camera and sprite control
+- Music & sound effects control
+- Integrations with iTween and Spine
+- Easy to follow tutorial videos
+- Several example games included
