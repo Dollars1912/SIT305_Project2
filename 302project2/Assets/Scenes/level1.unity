@@ -4985,8 +4985,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundson: 0
   Volume: 0.1
-  BGmusic: {fileID: 1277315869}
-  btnsounds: {fileID: 859937884}
+  BGmusic: {fileID: 859937884}
+  btnsounds: {fileID: 1277315869}
   soundsison: {fileID: 21300238, guid: ac32406eb17b6d148a10faa8bde82da5, type: 3}
   soundsisoff: {fileID: 21300240, guid: ac32406eb17b6d148a10faa8bde82da5, type: 3}
   data:
@@ -23699,7 +23699,7 @@ GameObject:
   - component: {fileID: 563039122}
   - component: {fileID: 563039124}
   - component: {fileID: 563039123}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pause_panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29381,7 +29381,7 @@ GameObject:
   - component: {fileID: 679196352}
   - component: {fileID: 679196351}
   - component: {fileID: 679196350}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: quit_togglr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31232,7 +31232,7 @@ GameObject:
   - component: {fileID: 720161107}
   - component: {fileID: 720161106}
   - component: {fileID: 720161105}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Play_toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58727,7 +58727,7 @@ GameObject:
   - component: {fileID: 1277315873}
   - component: {fileID: 1277315872}
   - component: {fileID: 1277315871}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: sounds_toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65026,7 +65026,7 @@ GameObject:
   - component: {fileID: 1412745726}
   - component: {fileID: 1412745728}
   - component: {fileID: 1412745727}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69823,7 +69823,7 @@ MonoBehaviour:
     img_health: {fileID: 283402881}
     img_exp: {fileID: 1955075600}
     panelPause: {fileID: 563039121}
-    mobileui: {fileID: 1288346222}
+    mobileui: {fileID: 1905136808}
   bigcoin: {fileID: 1734051852783746, guid: bebbee267efe4ca448b1b8855ee20eca, type: 2}
   coinvalue: 20
   Maxtime: 1000

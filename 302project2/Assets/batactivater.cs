@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// this class is controlling the batactivater game object. when user collide with this object, the activation will active the behavior of the flying bat to attack people. 
+/// </summary>
 public class batactivater : MonoBehaviour {
     public GameObject bat;
    

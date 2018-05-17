@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
+/// <summary>
+/// this class is controlling the behavior ai(move,attack,die) of the boss object
+/// </summary>
 public class bossai : MonoBehaviour {
     public float jumpspeed;
     public int startjumpat;
@@ -65,8 +68,10 @@ public class bossai : MonoBehaviour {
         if (health <= 0)
         {
             isdead = true;
-            Destroy(enemy);
+            Destroy(enemy,3);
             Instantiate(bossfireball,this.transform.position, Quaternion.identity);
+            SceneManager.LoadScene("game");
+           
 
         }
     }

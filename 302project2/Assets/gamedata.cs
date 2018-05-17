@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+/// <summary>
+/// this class is to orgnized the data store in the game.dat file
+/// </summary>
 [Serializable]
 public class gamedata {
 

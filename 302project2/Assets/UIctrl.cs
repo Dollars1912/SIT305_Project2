@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-
+/// <summary>
+/// 
+/// </summary>
 [Serializable]
 public class UIctrl {
 

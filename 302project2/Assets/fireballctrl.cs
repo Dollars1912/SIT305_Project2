@@ -26,18 +26,6 @@ public class fireballctrl : MonoBehaviour {
     }
    
 
-    /*IEnumerator releasefireball()
-    {
-
-        Enemypatrol.enmypatro.stopmoving();
-        anim.SetInteger("state", 0);
-        anim.SetInteger("state", 1);
-        yield return new WaitForSeconds(0.5f);
-   
-        anim.SetInteger("state", 0);
-        anim.SetInteger("state", 2);
-        Debug.Log("fireball!!!1");
-    }*/
     public void fireball()
     {
         rb.AddForce(new Vector2(movespeed, dropspeed));

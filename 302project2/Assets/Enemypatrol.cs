@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// provides simpling patrolling behavior between 2 position
+///this class is for all the enemy with some simple AI that provides simpling patrolling behavior between 2 position
 /// </summary>
 public class Enemypatrol : MonoBehaviour {
     public static Enemypatrol enmypatro;
@@ -36,10 +36,14 @@ public class Enemypatrol : MonoBehaviour {
         FliponEdges();
 		
 	}
+    /// <summary>
+    /// this method can draw a line betwen two position , it will appear in the game but visible in the editting panel.
+    /// </summary>
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(leftbound.position, rightbound.position);
     }
+    //controllinmg the movement of the enemy
     public void move()
     {
         Vector2 temp = rb.velocity;
@@ -47,7 +51,7 @@ public class Enemypatrol : MonoBehaviour {
         rb.velocity = temp;
 
     }
-
+//controlling the facing direction of the enemy when enemy is moving.
     void SetStarrtingdirection()
     {
         if (speed > 0)
@@ -56,6 +60,7 @@ public class Enemypatrol : MonoBehaviour {
         else if (speed < 0)
             sr.flipX = false;
     }
+    //controlling the timedelay of the movement
    IEnumerator Turnleft(float originalSpeed)
     {
         yield return new WaitForSeconds(Random.Range(mindelay, maxdelay));
@@ -71,6 +76,7 @@ public class Enemypatrol : MonoBehaviour {
         speed = -orginalSpeed;
         canturn = true;
     }
+    // make the enemy only turn around when they rreach the edge.
     void FliponEdges()
     {   
         if (sr.flipX && transform.position.x >= rightbound.position.x)

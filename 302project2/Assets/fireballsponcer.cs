@@ -27,7 +27,7 @@ public class fireballsponcer : MonoBehaviour {
       if (canSpawn)
         {
             changepoint();
-            StartCoroutine(spawnfireball(fireballrange));
+            StartCoroutine(spawnfireball(fireballrange));                                                                                                                            
             
         }
     }

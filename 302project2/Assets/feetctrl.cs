@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// this class is contrrolling the feet section of the player, it will recognize the attachment of player and ground and appear the dust effect when player landing
+/// </summary>
 public class feetctrl : MonoBehaviour {
 
     public Transform dustSFX;

@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// this class is for the location of the camera, as the android sceen size is 1024*600 so I determine a offset at y position  
+/// and also make use the position of the player to let is follow the movement of the playerr with some offset.
+/// </summary>
 public class cameractrl : MonoBehaviour {
     public Transform player;
     public float yoffset;

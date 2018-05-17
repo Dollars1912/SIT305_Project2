@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -258,13 +260,10 @@
   <ItemGroup>
     <Compile Include="Assets\attackctrl.cs" />
     <Compile Include="Assets\audioctrl.cs" />
-    <Compile Include="Assets\AudioFX.cs" />
     <Compile Include="Assets\batactivater.cs" />
     <Compile Include="Assets\bossai.cs" />
-    <Compile Include="Assets\boxCtrl.cs" />
     <Compile Include="Assets\bulletsponer.cs" />
     <Compile Include="Assets\cameractrl.cs" />
-    <Compile Include="Assets\coincellecterr.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
     <Compile Include="Assets\DestroywithDelay.cs" />
@@ -814,7 +813,6 @@
     <Compile Include="Assets\scroll.cs" />
     <Compile Include="Assets\SFXctrl.cs" />
     <Compile Include="Assets\SFXgroup.cs" />
-    <Compile Include="Assets\simplemovement.cs" />
     <Compile Include="Assets\speedyturtlectrrl.cs" />
     <Compile Include="Assets\Talkable.cs" />
     <Compile Include="Assets\thunder.cs" />

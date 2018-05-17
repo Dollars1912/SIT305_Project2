@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// the contrrol script of the attack section
+/// when user press attack button it will generate a attack section.
+/// </summary>
 public class attackctrl : MonoBehaviour {
 
     public Sprite newimage;
     Rigidbody2D rib; 
-   Vector2 velocity;
+    Vector2 velocity;
     SpriteRenderer sr;
     public static attackctrl attackcontrl;
     private void Awake()
@@ -26,6 +29,13 @@ public class attackctrl : MonoBehaviour {
         rib.velocity = velocity;
 
     }
+    /// <summary>
+    /// validate the collition between the user attack and the object. when attack section collide with box and enmemy, the event triggered.
+    /// returm snippet: 1. when the attack section collide with box, it will return a method from box controll call" boxController.OnTriggered", this method is to control the item appear when user 
+    /// open the box
+    /// 2. when user attack the object contain enemy tag, the method is return a method Destroy() to destroy the collide object.
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("box"))
@@ -43,7 +53,9 @@ public class attackctrl : MonoBehaviour {
         }
       
     }
-
+    //this method is to change the movement of the attack section. 
+    //the method will called when user collect item.
+    //it will returned the a value of the movement spped and then destrtoy the attactk section in a time interval. 
     public void changespeed()
     { 
         if(Knight.knights.Ispowerpup == true&& Knight.knights.isbetterrpowerup == false && Knight.knights.GetComponent<SpriteRenderer>().flipX==true)
@@ -71,11 +83,6 @@ public class attackctrl : MonoBehaviour {
         {
             Destroy(this.gameObject, 0.2f);
         }
-
-
-
-
-
         Debug.Log("levelup");
     }
 }
