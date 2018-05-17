@@ -406,10 +406,6 @@
     <None Include="Assets\Fungus\Thirdparty\Reorderable List Field\Editor\Editor.ReorderableList.xml" />
     <None Include="Assets\Fungus\Thirdparty\Reorderable List Field\LICENSE.txt" />
     <None Include="Assets\Fungus\Thirdparty\Reorderable List Field\README.txt" />
-    <None Include="Assets\Sprites\Actors\Enemies\monster-croc\Crocodile Mascot Running Game Character\get more at bevouliin_dot_com.txt" />
-    <None Include="Assets\Sprites\Actors\Enemies\monster_round\get more at bevouliin_dot_com.txt" />
-    <None Include="Assets\Sprites\Actors\Enemies\monster_sqaure\get more at bevouliin_dot_com.txt" />
-    <None Include="Assets\Sprites\Actors\Enemies\monster_tiger\get more at bevouliin_dot_com.txt" />
     <None Include="Assets\game_resourse\new assets\living-tissue-platform-files\license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,13 +1,26 @@
 ﻿<Properties StartupConfiguration="{77A74B78-B7E1-5F9C-886D-225614C3745D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/menucontrol.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/gamectrl.cs">
     <Files>
-      <File FileName="Assets/menucontrol.cs" Line="1" Column="1" />
+      <File FileName="Assets/itemctrl.cs" Line="17" Column="6" />
+      <File FileName="Assets/coincollecter.cs" Line="17" Column="1" />
+      <File FileName="Assets/game_resourse/button/character/scripts/NPCController.cs" Line="20" Column="6" />
+      <File FileName="Assets/gamectrl.cs" Line="352" Column="34" />
+      <File FileName="Assets/game_resourse/button/character/scripts/HPPotCountController.cs" Line="1" Column="1" />
+      <File FileName="Assets/batactivater.cs" Line="1" Column="1" />
+      <File FileName="Assets/bossai.cs" Line="1" Column="1" />
+      <File FileName="Assets/bulletsponer.cs" Line="1" Column="1" />
+      <File FileName="Assets/cameractrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/DestroywithDelay.cs" Line="1" Column="1" />
+      <File FileName="Assets/game_resourse/button/character/scripts/BoxContoller.cs" Line="1" Column="1" />
+      <File FileName="Assets/game_resourse/button/character/scripts/DoorController.cs" Line="1" Column="1" />
+      <File FileName="Assets/game_resourse/button/character/scripts/Knight.cs" Line="1" Column="1" />
+      <File FileName="Assets/router.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/DOLLARS1912/Projects/SIT305_Project2/302project2/Assets/game_resourse/button/character/scripts/DoorController.cs" relfile="Assets/game_resourse/button/character/scripts/DoorController.cs" line="37" column="1" />
+      <Breakpoint file="/Users/DOLLARS1912/Downloads/SIT305_Project2-master/302project2/Assets/game_resourse/button/character/scripts/DoorController.cs" relfile="Assets/game_resourse/button/character/scripts/DoorController.cs" line="37" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

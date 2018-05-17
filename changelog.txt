@@ -5,57 +5,97 @@ Create Project
 13 April: variable changed and add license.
 
 15 April: add dialog and collision/ Add change log file , run the application on android devices , adjust the windows
+Summary: Adjusting the size of the game is an important task, which is good for later game development.
 
 17 April: add more picture to assets (Still working on: add assets to prefab)
+Summary: Search for the icons or images that the game requires, which is more conducive to the development of the game, and also saves the later development time.
 
 18 April: create new branch; add material, resolve conflict
+Summary: When two people cooperate to complete the project, it is necessary to make good use of Github to make the work of two people not conflict and save a lot of time.
 
 19 April: layout change
 
 20 April: add menu page and main game level1 (Still working on: should be use level developer in UNITY)
+Summary: In the early stages of making a game, think about all the scenes we need to do. Using level developer to develop the game is the best technique to develop our game.
 
 21 April: Create character/ create transform door “GoToScene”(DONE: character model. Still working on: character animation, some problem with door animation)
+Summary: The character's image, and the animation effect, is also critical for RPG games. It's a good idea to use the door into the next scene. 
 
 22 April: level2 version1/ add assets and edit license
+Summary: At level1, the map design of level2 is more complex, and the relative difficulty of the game can be improved a lot.
 
 23 April: recreate level1 (level developer)/ change character variable(gravity, jumpSpeed. Still working on: jump time limit)
+Summary: Adjust the figures so that the characters can play smoothly on each map. There will be no topographic problems so that the game can't be played.
 
 24 April: level1 version1.2/ fix change log
+Summary: Adjust the figures so that the characters can play smoothly on each map. There will be no topographic problems so that the game can't be played.
 
 25 April: add rebirthPointScene/ edit level2/ add level3 scene(DONE: level map design. Still working on: background and background sets)
+Summary: The design of maps is becoming more and more experienced. Each map has its own highlights waiting for players to discover.
 
 26 April: add animation(DONE: face different position, animation while walking. Still working on: Jump animation)
+Summary: Our game will include full animation effects and scene effects, which makes the game more professional.
 
 27 April: finish rebirthPointScene/ finish level1 and 2/ create level3/ add new prefabs(Still working on:The map is not fully completed. Still need to work on another level.)
+Summary: Prefabs can be the most importation feature in Unity. Object can be used in all scenes by using prefab.
 
 28 April: add attack and character action/animation. (Still working on: need to add SFX, attack effect is not complete.)
+Summary: Our game will include full animation effects and scene effects, which makes the game more professional.
 
 29 April: finish update StartPoint, player move, buttons and collect items (Still working on: Only one scene is done, and need apply to other scene.)
+Summary: Picking up props is a very important element in our game, and the players can pick up props. Pick up gold COINS to buy props, so that the process of the game can be developed.
 
 30 April: change character value to fit in each level/ add level3 enemy. (Still working on:Only the enemy's image is added, need to complete the enemy's function.)
+Summary: The last few enemies will be smarter and harder to defeat.
 
 1 May: interactive with box, add SFX. (Still working on: You need to complete the function of the drop rewards from the box.)
+Summary: Players can acquire stronger skills through the box, so the interaction with the box is also an important element in the game.
 
 2 May: add NPC character/ Design level3 Map/ Add Grade Criteria/ Add readme. (Still working on: NPC and main character interaction, dialogue, and story.)
+Summary: All NPCS can interact with the player, and the conversation will appear when attacking NPCS. Players can get information from the interaction with NPCS (game background, game play, purchase items, etc.)
 
 3 May: add HUD and store data in binary file. (Still working on:The blood value, experience, and equipment stored in the database.)
+Summary: In the upgrade process, the hud will change, and the enhancement of the main character will be displayed on the hud.
 
 4 May: finish database in one scene(save load health and exp.), enemy created. (Still working on: working on fully functional enemies.)
+Summary: The level of the player, the equipment will be stored in the database.
 
 5 May: changed Knight in all scenes to use one prefab. Add KnightModeController to change the knight mode(attack mode). (Still working on: Automatic switching attack mode when the player get equipment from the treasure chest or enemy.)
-
 5 May: fixed knight attack animation by setting exit time/ Added controller for box to let player pick item in box. (Still working on: Drop items randomly and pick up items after an attack.)
+Summary: The player's state will inherit to the next scene. Use KnightModeController to change the knight image and attack arrange range, damage.
 
 6 May: add beginning dialog and sound effect/ fix bug, fully function enemy, fully function database(Still working on: Complete the story and finish the story.)
+Summary: Add game background scene and game sound to make the game more coherent.
 
 7 May: fix bugs and add more enemies/ add store dialog and NPC dialog(Still working on: Let NPCS interact with players by attack button.)
 
 8 May: more enemy added, power up(attack mode switch)update. (Still working on: More kinds of enemies, put the enemy in all the levels. Build final boss, final level design.)
+Summary: Completed the role of the skill upgrade system, stronger weapon effect.
 
 9 May: add change log Readme/add game icon,Splash screen(Still working on: game icon for now is just for test, still working on the new game icon.)
+Summary: Start preparing for the release game, adding the elements needed to release the game.
 
 9 May: create finial level/finish beginning dialog/add change-log, readme/add more enemies(Still working on: load each scenes from level map.)
+Summary: Design the final level, boss fight. A challenging final level to make the game more complete.
 
 10 May: create thunder, create fire magician(Still working on: change enemy valuable and put enemy into different level.)
+Summary: Design the final level, boss fight. A challenging final level to make the game more complete.
 
 12 May: adapt all scene for scene load, fireball attack(Still working on: different dialog into levels)
+Summary: The screen of the game needs to be compatible with different phone screens.
+
+13 May: add controller for NPC dialog (Still working on: buy HP pot decreasing the money and use HP pot to heal.)
+13 May: added control to use HP pot/ added monster controller and door controller (Still working on: apply changes to all scenes’ door and monster controller.)
+13 May: fix monsterController bug, apply changes to all scenes (Still working on: touch up game add company detail and instructions to publish.)
+Summary: The production of HP pot can be completed to recover its physical strength during the battle. Design monsterController to shut the door until you clear all enemies of this scene.
+
+15 May: finish adding enemies,fix dialog (Still working on: fix database bug.)
+15 May: add company detail ready to publish (Still working on: choose which APP store to publish the game, take screen shots of the game.)
+Summary: Publishing games on different platforms needs to meet different requirements, and we are still discussing which platform to release the game is the most appropriate.
+
+16 May: menu and dialog fix and exp bug fix (Still working on: recording demonstration video.)
+16 May: game has published on Google Play store.
+Summary: Finally, we decided to release our game on google play, and google will charge $25 for new app publish.
+
+17 May: fix bugs,add music,support store user setting, took video.
+Summary: The last time we improved the grading requirements for our homework, we made up the missing features and tested the game for the last time.

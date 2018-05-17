@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// controlling all the behavirer of the player itself, it include(playermove,player jump, player animation,user mobileui to control the player and particle effect when event happened)
+/// </summary>
 public class Knight : MonoBehaviour {
     public static Knight knights;
     private void Awake()
@@ -62,9 +64,14 @@ public class Knight : MonoBehaviour {
             Horizontalmoves(-speedBoost);
         if (rightprressed)
             Horizontalmoves(speedBoost);
-    }   
+    }
 
-
+    /// <summary>
+    /// controlling the horizontal movement of the player and change the animation when user are horizontally moving
+    /// the method are called when user are tapping the left and right moving button  exp(Horizontalmoves(afloat value +f))
+    /// the method will return the velocity of the Rigibody2d component to move the player 
+    /// </summary>
+    /// <param name="playerSpeed"></param>
     void Horizontalmoves(float playerSpeed)
     {
         rb.velocity = new Vector2(playerSpeed, rb.velocity.y);
@@ -87,7 +94,11 @@ public class Knight : MonoBehaviour {
         if(!isjump)
             anim.SetInteger("state", 0);
     }
-
+    /// <summary>
+    /// controlling the user attack behavier, it will gerate the different attack section in the left/right attack position and determine the left/right attack by the direction facing
+    /// the method is called when user press attack button exp(attck())
+    /// the user will return the attackctrl class by generating a acctak area in the attack position
+    /// </summary>
     void attck()
     {
         
@@ -128,7 +139,11 @@ public class Knight : MonoBehaviour {
         }
 
     }
-
+/// <summary>
+/// controlling the jump behavier of the player also including double jump with animation
+/// the method will called whenever the user press jump button  exp(jump())
+/// the method will return to the Riginody2d component wo make the character move upwards
+/// </summary>
     void jump()
     {
         if (isgrounded) {
@@ -146,7 +161,7 @@ public class Knight : MonoBehaviour {
         }
         
     }
-
+    //decress the count of the medicine when tap heal button
     void Heal()
     {
         var medicineCount = gamectrl.gamecontrl.data.medicine;
@@ -160,12 +175,18 @@ public class Knight : MonoBehaviour {
     {
         canDoubleJump = true;
     }
+    /// <summary>
+    /// this method is to determine what has been collide with user and depends on the tag of the object to do the different things
+    /// </summary>
+    /// <param name="other"></param>
     void OnCollisionEnter2D(Collision2D other)
     {
+        //determine whether collide with ground, disable jump when not at ground
         if (other.gameObject.CompareTag("ground"))
         {
             isjump = false;
         }
+        //deterrrmine the collision with enemy
         if (other.gameObject.CompareTag("enemy"))
         {
             anim.SetInteger("state",-1);
@@ -179,6 +200,7 @@ public class Knight : MonoBehaviour {
             
              
         }
+        //determine the collison with monster-coin,detroy the coin, show the particle effect and gain exp 
         if (other.gameObject.CompareTag("coin_level2"))
         {
             gamectrl.gamecontrl.UpdateCoinCount();
@@ -188,6 +210,9 @@ public class Knight : MonoBehaviour {
           
         }
     }
+    /// <summary>
+    /// adatpt the method in mobileuictrl,make them using the method here.
+    /// </summary>
     public void mobileleft()
     {
         leftpressed = true;
@@ -216,10 +241,15 @@ public class Knight : MonoBehaviour {
         rightprressed = false;
         stopmoving();
     }
+    /// <summary>
+    /// show the different event when user collide with object with triggered
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.gameObject.tag)
         {
+            //when user collect gold coin, show the effect update the coin cound and gain exp
             case "Coin":
   
                     SFXctrl.sfxcontrol.ShowSparkle(other.gameObject.transform.position);
@@ -227,19 +257,23 @@ public class Knight : MonoBehaviour {
                     gamectrl.gamecontrl.gainexp(gamectrl.value_Item.coin);
                 
                 break;
+                //when user fall in water, show the splash effect and let the garbage collect to kill the player
             case "water":
                // garabagectrl.SetActive(false);
                     SFXctrl.sfxcontrol.Showsplash(other.gameObject.transform.position);
                 break;
+                //when user collide with enemy, call the hurtanimation to let is lose life
             case "enemy":
                 // garabagectrl.SetActive(false);
                 gamectrl.gamecontrl.playerhurtanimation(gameObject,other.gameObject);
                 break;
+            //when user collide with superrattack(thunder and fireball), call playerdiedanimation to kill player
             case "superattk":
                 // garabagectrl.SetActive(false);
                 gamectrl.gamecontrl.playerdiedanimation(gameObject);
                 SFXctrl.sfxcontrol.enemyexplode(this.gameObject.transform.position);
                 break;
+                //when user pick the pwerup item call the method in attackctrl to hcanging the range and effect of the attack.
             case "powerup":
                 Vector3 powerupPos = other.gameObject.transform.position;
                 Destroy(other.gameObject);
@@ -247,6 +281,7 @@ public class Knight : MonoBehaviour {
                 KnightModeController.knightmodectrl.currentMode = KnightModeController.KnightMode.Medium;
                 SFXctrl.sfxcontrol.ShowSparkle(powerupPos);
                 break;
+            // //when user pick the powerup and beterpower up item call the method in attackctrl to hcanging the range and effect of the attack.
             case "betterpowerup":
                 Vector3 betterpowerupPos = other.gameObject.transform.position;
                 Destroy(other.gameObject);

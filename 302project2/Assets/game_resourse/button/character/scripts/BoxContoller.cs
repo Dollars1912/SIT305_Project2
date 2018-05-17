@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// controlling the mode of the box, determine what shold appear when user open the box
+/// </summary>
 public class BoxContoller : MonoBehaviour
 {
     //states enum
-
     public enum ChestState
     {
         Closed,
@@ -30,6 +31,11 @@ public class BoxContoller : MonoBehaviour
         CurrentMode = ChestState.Closed;
   
     }
+    /// <summary>
+    /// there are 4 mode of the box, chestclose.chestopen, r1st rewards appear,2nd rewards appear.
+    /// the metho is called when box is active exp( ChestState CurrentMode = ChestState.Closed;)
+    /// the method will return to the status of these 4 gameobject
+    /// </summary>
     void FixedUpdate()
     {
         switch (CurrentMode)
@@ -66,7 +72,9 @@ public class BoxContoller : MonoBehaviour
     }
 
    
-
+    /// <summary>
+    /// controlling what reward should given when box open
+    /// </summary>
     public void OnTriggered()
     {
         switch (CurrentMode)

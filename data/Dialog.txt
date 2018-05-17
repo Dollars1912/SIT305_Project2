@@ -1,0 +1,164 @@
+{b}bold text{/b}
+{i}itailc text{/i}
+{color=red}txt(color){/color}
+
+???: 
+Its time to weak up.{wc}
+People need you, world need you. We dont have much time. Demons are coming{wc}
+Go east and save us.... wake up... wake up....{wc}
+
+Luck: 
+Ahhh!!!!{wc}
+This dream again! What dose it mean? And who is talking to me?{wc}
+Sky turned to red!{wc}
+It seems... I have to go east as that voice said...{wc}
+
+Anna:
+Hey, you! You look new in here. Would you want to listen to the story my grandmother told me?{wc}
+
+Luke:
+I would like to, little girl{wc}
+
+Anna:
+my grand mom told me being a hero need press  {b}{color=red}“← →”{/color}{/b} to move, press {b}{color=red}“sword”{/color}{/b} to attack. And!!!! {b}{color=red}“B”{/color}{/b} to healing yourself! Thats how you be a hero.{wc}
+
+Guard:
+Oi! move!{wc} 
+
+Luke:
+Yea, but I wonder why you look nerves.{wc}
+
+Guard:
+I can’t let door open like this, before “they” coming for us I have to close it!{wc}
+
+Luck:
+Tell me about this.{wc}
+
+Guard:
+Few weeks ago the demon invaded this land, and here you see.... we are the last survivors.{wc}
+As prophecy says a brave will come to save us, i hope that guy can come here before demon find us.... now hurry!{wc}
+
+Alma:
+The time is coming young man...{wc}
+
+Luck:
+Are you talking to me?{wc}
+
+Alma:
+{b}{i}{color=blue}El poder de la vida eterna me renacera{/color}{/i}{/b} remember this, it can save you from danger.{wc} 
+
+Luck:
+wired mage.... anyway i hope this spell can help me.{wc}
+
+Tiendas:
+New guy, have a look. I have everything you need.{wc}
+
+Luck:
+What happen with this village.{wc}
+
+Tiendas:
+If u don't buy stuff, I have nothing to tell you.{wc}
+
+Starlight:
+Hello traveler, welcome to the sanctuary. As you see we are in the danger, if i were you I would not go east.{wc}
+
+Luck:
+East? Why do you say that?{wc}
+
+Starlight:
+Only The Brave will not die in the east, and you don't seem like The Brave.{wc}
+
+Luck:
+The purpose of my coming here is to go to the east. No matter what happens I will go there{wc}
+
+Starlight:
+Good luck to you traveler.{wc} 
+
+Luck:
+Can you tell me about the east? Im about to go there{wc}
+
+Guerrero:
+Ha! anther guy looking for death!{wc}
+
+Luck:
+It sounds You have been to the east before.{wc}
+
+Guerrero:
+Been to the east?? Im not stupid, many people like you are all dead on the way to the east. Even i can't fight those demons.{wc}
+
+Luck:
+Like the voice in dream told me... It's not just a dream.{wc}
+
+Guerrero:
+A dream? You are the most stupid guy I have ever seen, Waiting for your bad news, Rookie! Hahaha{wc}
+
+
+
+(when you view the shop)Alma:
+Take your time young man.{wc}
+
+(when you are respawn):
+{b}{i}{color=blue}El poder de la vida eterna me renacera{/color}{/i}{/b}{wc}
+
+1-1
+start of 1-1
+
+???:
+You are the only hope to save us...{wc}
+
+Luck:
+Ahh my head, its painful! That voice again! I need to go further and find out.{wc}
+
+At the end of 1-1
+
+Luck: It was a tough fight, but they can't stop me. Now stranger, where are you!{wc}
+
+???:
+Far east... you need to defeat...{wc}
+
+1-2
+start of 1-2
+
+Luck:
+That voice... Im I the only one can hear that? The voice guides me here, it must have some reasons. Umm... It means to kill all those demons?{wc}
+
+???:
+Go up... reach... the Invisible door find out... take look on wall...{wc}
+
+1-3
+Start of 1-3
+
+???:
+It's getting darker and darker. You almost there, You are very close to the demon lord's nest{wc}
+Only the {color=yellow}Brave Heart{/color} can makes you go further{wc}
+
+1-4
+start of 1-4
+
+???:
+{punch=20,0.5}The dark lord is there, this is your fate. The human future is in your hand!{wc}
+
+Luck:
+Finally, this is what i looking for! Now im gonna end this! 
+
+Dark Lord:
+Hahah thanks for the food deliever! Stupid human!
+
+when u beat dark lord
+
+Dark Lord:
+{punch=20,0.5}Noooo! I'm invincible! How come I defeated by a hunmanbeing!{wc}
+{punch=20,0.5}I will not forget you! I will be back and that day will be your doom!!
+
+???:
+Luck you name will be remembered. Everything you did will not be forgotten{wc}
+Now this land is back to peace.{wc}
+
+Luck:
+Wait! Before you go, please tell me who you are.
+
+NiuNiu:
+Im NiuNiu. The God of Peace. I will bless you.
+
+Narrator:
+Dark lord has gone, everything rouses up；and people lived happily ever after.

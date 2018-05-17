@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KnightModeController : MonoBehaviour
-{
+{/// <summary>
+/// this class will changing the appearence of the player when they power up and super powerup
+/// </summary>
     public static KnightModeController knightmodectrl;
     private void Awake()
     {
@@ -21,15 +23,10 @@ public class KnightModeController : MonoBehaviour
    
 
     public SpriteRenderer KnightSpriteRender;
-
-
-
-    // TODO hook this currentMode field with the game controller.
-    // TODO change it back to private
     public KnightMode currentMode;
        
 
-    
+    //determine the current mode of the knight
     void setmode()
     {
         if(Knight.knights.Ispowerpup == true&& Knight.knights.isbetterrpowerup == false)
@@ -48,7 +45,9 @@ public class KnightModeController : MonoBehaviour
 
         }
     }
-
+    /// <summary>
+    /// for different mode scwitch the appearence of the player to make the game attactive
+    /// </summary>
     void FixedUpdate()
     {
         switch (currentMode)

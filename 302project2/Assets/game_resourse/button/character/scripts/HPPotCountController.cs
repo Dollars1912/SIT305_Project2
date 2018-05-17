@@ -5,7 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HPPotCountController : MonoBehaviour {
-
+    /// <summary>
+    /// contrlling the number of the medicine
+    /// </summary>
     public Text PotCountText;
     public int PotCount { get; set; }
 

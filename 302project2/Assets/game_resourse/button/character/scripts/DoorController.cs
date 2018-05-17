@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour {
 
-    public GameObject Knight;
+    public GameObject Knights;
     public Animator animator;
     public string ScaleAnimationName = "Scale";
     public string GoToLevel;
@@ -19,7 +19,7 @@ public class DoorController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other == Knight.GetComponent<Collider2D>())
+        if (other == Knights.GetComponent<Collider2D>())
         {
             StartCoroutine(Coroutine());
         }
@@ -28,10 +28,7 @@ public class DoorController : MonoBehaviour {
     private IEnumerator Coroutine()
     {
 		animator.Play(ScaleAnimationName);
-
-        //yield return new WaitForSeconds(3);
-
-        while (!Input.GetButton("Jump"))
+        while (Knight.knights.isgrounded)
             yield return null;
 
         if (monsterCountController.IsAllMonsterDead())
@@ -41,7 +38,7 @@ public class DoorController : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D other)
     {
-		if (other == Knight.GetComponent<Collider2D>())
+		if (other == Knights.GetComponent<Collider2D>())
 		{
             StopAllCoroutines();
 		}

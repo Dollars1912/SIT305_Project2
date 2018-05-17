@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1000}
+  m_AnchoredPosition: {x: 0, y: -1000.00006}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &65861148
@@ -217,7 +217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1300, y: -1000}
+  m_AnchoredPosition: {x: 1300, y: -1000.00006}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &201910136
@@ -288,7 +288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1300, y: -1000}
+  m_AnchoredPosition: {x: -1300, y: -1000.00006}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &288174375
@@ -359,7 +359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 460.43, y: -1000}
+  m_AnchoredPosition: {x: 460.43, y: -1000.00006}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &564456347
@@ -500,8 +500,8 @@ Canvas:
   m_GameObject: {fileID: 611373892}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1046784407}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -788,7 +788,6 @@ GameObject:
   - component: {fileID: 909573074}
   - component: {fileID: 909573073}
   - component: {fileID: 909573072}
-  - component: {fileID: 909573071}
   - component: {fileID: 909573070}
   - component: {fileID: 909573069}
   - component: {fileID: 909573068}
@@ -802,6 +801,9 @@ GameObject:
   - component: {fileID: 909573078}
   - component: {fileID: 909573079}
   - component: {fileID: 909573083}
+  - component: {fileID: 909573086}
+  - component: {fileID: 909573087}
+  - component: {fileID: 909573071}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -894,17 +896,20 @@ MonoBehaviour:
 --- !u!114 &909573071
 MonoBehaviour:
   m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 11462346, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909573067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d52ce2dfbc0b4dc4aa04334fc76695e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 909573072}
-  waitForFrames: 1
+  itemId: 18
+  indentLevel: 0
+  flowchart: {fileID: 0}
+  blockName:
+    stringRef: {fileID: 0}
+    stringVal: 
 --- !u!114 &909573072
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -919,7 +924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 65.13636
+    x: 63.959885
     y: 104.09626
     width: 120
     height: 40
@@ -928,7 +933,7 @@ MonoBehaviour:
   itemId: 0
   blockName: New Block
   description: 
-  eventHandler: {fileID: 909573071}
+  eventHandler: {fileID: 909573086}
   commandList:
   - {fileID: 909573084}
   - {fileID: 909573070}
@@ -943,6 +948,7 @@ MonoBehaviour:
   - {fileID: 909573082}
   - {fileID: 909573083}
   - {fileID: 909573079}
+  - {fileID: 909573071}
 --- !u!114 &909573073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,8 +976,9 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 909573072}
   selectedCommands:
-  - {fileID: 909573083}
-  variables: []
+  - {fileID: 909573084}
+  variables:
+  - {fileID: 909573087}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1203,7 +1210,7 @@ MonoBehaviour:
   waitUntilFinished: 1
 --- !u!114 &909573083
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909573067}
@@ -1227,10 +1234,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  musicClip: {fileID: 8300000, guid: faa4612ab29ecf14fa0ddb17d97e5e75, type: 3}
+  musicClip: {fileID: 8300000, guid: 1ecb5b9bfd001154d99661e62121cfa1, type: 3}
   atTime: 0
   loop: 1
   fadeDuration: 1
+--- !u!114 &909573086
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 909573067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 909573072}
+  waitForFrames: 1
+--- !u!114 &909573087
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 909573067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: HasPurchasedHP
+  value: 0
 --- !u!1 &1046784404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -460.43, y: -1000}
+  m_AnchoredPosition: {x: -460.43, y: -1000.00006}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1217692232
